@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Адаменко](https://up.htmlacademy.ru/adaptive/10/user/215164).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Одноколова].
 
 ---
 
