@@ -5,44 +5,116 @@
     <title>HTML Academy: Седона - Форма отзыва</title>
   </head>
   <body>
+   
+   <!-- HEADER -->
+   
     <header class="page-header">
-      <h1 class="visually-hidden">Седона</h1>
-      <a class="page-header__logo" href="index.html">
-        <img src="http://placehold.it/102x83" width="102" height="83" alt="Седона"/>
-      </a>
-      <nav class="main-menu  main-menu--closed">
-        <button class="main-menu__toggle" type="button">Открыть меню</button>
-        <ul class="main-menu__list">
-          <li class="main-menu__item">
-            <a class="main-menu__link  main-menu__link--active" href="#">Главная</a>   
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Фото и видео</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Форма отзыва</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>     
-    </header>
-    <main>
-      
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__hashtag">#VISITSEDONA</div>
-      <div class="page-footer__social  social-links">        
-        <a class="social-link  social-link--tw" href="#">Twitter</a>
-        <a class="social-link  social-link--fb" href="#">Facebook</a>
-        <a class="social-link  social-link--yt" href="#">YouTube</a>      
-      </div>
-      <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">Разработано</span>
-        <a class="page-footer__copyright-link" href="#">
-          <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"/>
+      <div class="page-header__wrapper" >
+        <h1 class="visually-hidden">Седона</h1>
+        <a class="page-header__logo" href="index.html">
+          <img src="http://placehold.it/102x83" width="102" height="83" alt="Седона"/>
         </a>
+        <nav class="main-menu  main-menu--closed">
+          <button class="main-menu__toggle" type="button">Открыть меню</button>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link  main-menu__link--active" href="#">Главная</a>   
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Фото и видео</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Форма отзыва</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav> 
+      </div>    
+    </header>
+    
+    <!-- MAIN -->
+    
+    <main>
+     
+      <!-- Intro -->
+    
+      <section class="intro"></section>
+      
+      <!-- Form -->
+      
+      <section class="feedback">
+        <div class="feedback__wrapper">
+          <header class="section-header">
+            <h1 class="section-header__title">Оставьте свой отзыв</h1>
+            <p class="section-header__text">
+              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+            </p>
+          </header>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="form-fieldset">
+              <div class="form-fieldset__title">Представьтесь:</div>
+              <label class="form-fieldset__label" for="first name">Имя*:</label>
+              <input class="form-fieldset__input" type="text" name="first name" id="first name" placeholder="Петр" required/>
+              <label class="form-fieldset__label" for="last name">Фамилия*:</label>
+              <input class="form-fieldset__input" type="text" name="last name" id="last name" placeholder="Иванов" required/>
+              <label class="form-fieldset__label" for="middle name">Отчество:</label>
+              <input class="form-fieldset__input" type="text" name="middle name" id="middle name" placeholder="Александрович"/>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <div class="form-fieldset__title">Контактная информация:</div>
+              <label class="form-fieldset__label" for="phone number">Контактный телефон*:</label>
+              <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+              <label class="form-fieldset__label" for="email">Электронная почта*:</label>
+              <input class="form-fieldset__input" type="email" name="email" id="email" placeholder="Введите e-mail" required/>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <div class="form-fieldset__title">Ваше общее впечатление:</div>
+              <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
+              <label class="form-fieldset__label--bold" for="positive">Скорее положительное</label>
+              <input class="form-fieldset__radio" type="radio" name="impression" id="negative" value="negative"/>
+              <label class="form-fieldset__label--bold" for="negative">Скорее отрицательное</label>
+              <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
+              <label class="form-fieldset__label--bold" for="unknown">Затрудняюсь ответить</label>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <div class="form-fieldset__title">Посещенные достопримечательности:</div>
+              <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
+              <label class="form-fieldset__label--bold" for="devil's bridge">Мост Дьявола</label>
+              <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
+              <label class="form-fieldset__label--bold" for="slide park">Слайд-парк</label>
+              <input class="form-fieldset__checkbox" type="checkbox" name="mountain bell" id="mountain bell"/>
+              <label class="form-fieldset__label--bold" for="mountain bell">Гора-Колокол</label>
+              <input class="form-fieldset__checkbox" type="checkbox" name="red rocks" id="red rocks" checked/>
+              <label class="form-fieldset__label--bold" for="red rocks">Красные скалы</label>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <div class="form-fieldset__title">Опишите свои эмоции:</div>
+              <textarea class="form-fieldset__text" placeholder="Опишите подробно все свои восторги" rows="6"></textarea>
+            </fieldset>
+            <input class="button form__button" type="submit" value="Отправить отзыв"/>
+          </form>
+        </div>
+      </section>      
+    </main>
+    
+    <!-- FOOTER -->
+    
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__hashtag">#VISITSEDONA</div>
+        <div class="page-footer__social  social-links">        
+          <a class="social-link  social-link--tw" href="#">Twitter</a>
+          <a class="social-link  social-link--fb" href="#">Facebook</a>
+          <a class="social-link  social-link--yt" href="#">YouTube</a>      
+        </div>
+        <div class="page-footer__copyright">
+          <span class="page-footer__copyright-text">Разработано</span>
+          <a class="page-footer__copyright-link" href="#">
+            <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"/>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
