@@ -40,78 +40,82 @@
      
       <!-- Intro -->
     
-      <section class="intro"></section>
+      <section class="intro">
+        <div class="intro__image  intro__image--min">
+          <img src="http://placehold.it/229x39" width="229" height="39" alt="Sedona"/>
+        </div>
+      </section>
       
       <!-- Photo -->
       
-      <section class="photo">
-        <div class="photo__wrapper">
+      <section class="photogallary">
+        <div class="photogallary__wrapper">
           <header class="section-header">
             <h1 class="section-header__title">Фото и видео</h1>
             <p class="section-header__text">
               Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
             </p>
           </header>
-          <div class="photo-item">
-            <a class="photo-item__image" href="#">
+          <div class="photo">
+            <a class="photo__link" href="#">
               <img src="http://placehold.it/280x280" width="280" height="280" alt="Неродные просторы"/>
             </a>
-            <div class="photo-item__description">
-              <div class="photo-item__title">
+            <div class="photo__description">
+              <div class="photo__title">
                 Неродные просторы
               </div>
-              <div class="photo-item__author">
+              <div class="photo__author">
                 Автор фото: Борис
               </div>
-              <div class="photo-item__stats">
+              <div class="photo__stats">
                 1350
               </div>
             </div>
           </div>
-          <div class="photo-item">
-            <a class="photo-item__image" href="#">
+          <div class="photo">
+            <a class="photo__link" href="#">
               <img src="http://placehold.it/280x280" width="280" height="280" alt="Местная растительность"/>
             </a>
-            <div class="photo-item__description">
-              <div class="photo-item__title">
+            <div class="photo__description">
+              <div class="photo__title">
                 Местная растительность
               </div>
-              <div class="photo-item__author">
+              <div class="photo__author">
                 Автор фото: Сергей
               </div>
-              <div class="photo-item__stats">
+              <div class="photo__stats">
                 143
               </div>
             </div>
           </div>
-          <div class="photo-item">
-            <a class="photo-item__image" href="#">
+          <div class="photo">
+            <a class="photo__link" href="#">
               <img src="http://placehold.it/280x280" width="280" height="280" alt="Дорога на север"/>
             </a>
-            <div class="photo-item__description">
-              <div class="photo-item__title">
+            <div class="photo__description">
+              <div class="photo__title">
                 Дорога на север
               </div>
-              <div class="photo-item__author">
+              <div class="photo__author">
                 Автор фото: Петр
               </div>
-              <div class="photo-item__stats">
+              <div class="photo__stats">
                 96
               </div>
             </div>
           </div>
-          <div class="photo-item">
-            <a class="photo-item__image" href="#">
+          <div class="photo">
+            <a class="photo__link" href="#">
               <img src="http://placehold.it/280x280" width="280" height="280" alt="Мост дьявола"/>
             </a>
-            <div class="photo-item__description">
-              <div class="photo-item__title">
+            <div class="photo__description">
+              <div class="photo__title">
                 Мост дьявола
               </div>
-              <div class="photo-item__author">
+              <div class="photo__author">
                 Автор фото: Антон
               </div>
-              <div class="photo-item__stats">
+              <div class="photo__stats">
                 254
               </div>
             </div>
@@ -121,19 +125,32 @@
       
       <!-- Video -->
       
-      <section class="video">
-        <div class="video__wrapper">
+      <section class="videoplayer">
+        <div class="videoplayer__wrapper">
           <header class="section-header">
             <h1 class="section-header__title">Все еще сомневаетесь?</h1>
             <p class="section-header__text">
               Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
             </p>
           </header>
-          <video poster="http://placehold.it/320x201" width="320" height="201" preload="auto">
-            <source src="#" type="#">
-            <source src="#" type="#">
-            <source src="#" type="#">
-          </video>
+          <div class="player">
+            <video class="player__video" poster="http://placehold.it/320x201" width="320" height="201" preload="auto">
+              <source src="#" type="#">
+              <source src="#" type="#">
+              <source src="#" type="#">
+            </video>
+            <div class="player__controls">
+              <div class="player__volume">
+                <div class="player__bar"></div>
+                <div class="player__toggle"></div>
+              </div>
+              <div class="player__buttons">
+                <button class="player__button  player__replay">Replay</button>
+                <button class="player__button  player__subtitles">Subtitles</button>
+                <button class="player__button  player__fullscreen">Fullscreen</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

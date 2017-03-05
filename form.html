@@ -40,7 +40,11 @@
      
       <!-- Intro -->
     
-      <section class="intro"></section>
+      <section class="intro">
+        <div class="intro__image  intro__image--min">
+          <img src="http://placehold.it/229x39" width="229" height="39" alt="Sedona"/>
+        </div>
+      </section>
       
       <!-- Form -->
       
@@ -72,22 +76,22 @@
             <fieldset class="form-fieldset">
               <div class="form-fieldset__title">Ваше общее впечатление:</div>
               <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
-              <label class="form-fieldset__label--bold" for="positive">Скорее положительное</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="positive">Скорее положительное</label>
               <input class="form-fieldset__radio" type="radio" name="impression" id="negative" value="negative"/>
-              <label class="form-fieldset__label--bold" for="negative">Скорее отрицательное</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="negative">Скорее отрицательное</label>
               <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
-              <label class="form-fieldset__label--bold" for="unknown">Затрудняюсь ответить</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="unknown">Затрудняюсь ответить</label>
             </fieldset>
             <fieldset class="form-fieldset">
               <div class="form-fieldset__title">Посещенные достопримечательности:</div>
               <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
-              <label class="form-fieldset__label--bold" for="devil's bridge">Мост Дьявола</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="devil's bridge">Мост Дьявола</label>
               <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
-              <label class="form-fieldset__label--bold" for="slide park">Слайд-парк</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="slide park">Слайд-парк</label>
               <input class="form-fieldset__checkbox" type="checkbox" name="mountain bell" id="mountain bell"/>
-              <label class="form-fieldset__label--bold" for="mountain bell">Гора-Колокол</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="mountain bell">Гора-Колокол</label>
               <input class="form-fieldset__checkbox" type="checkbox" name="red rocks" id="red rocks" checked/>
-              <label class="form-fieldset__label--bold" for="red rocks">Красные скалы</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold" for="red rocks">Красные скалы</label>
             </fieldset>
             <fieldset class="form-fieldset">
               <div class="form-fieldset__title">Опишите свои эмоции:</div>
@@ -117,5 +121,28 @@
         </div>
       </div>
     </footer>
+    
+    <!-- POP UP -->
+    
+    <section class="success-popup">
+      <header class="section-header">
+        <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
+        <p class="section-header__text">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+        </p>
+        <button class="button  success-popup__button">Закрыть окно</button>
+      </header>
+    </section>
+    
+    <section class="failure-popup">
+      <header class="section-header">
+        <h1 class="section-header__title">Что-то пошло не так!</h1>
+        <p class="section-header__text">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </p>
+        <button class="button  failure-popup__button">Ok</button>
+      </header>
+    </section>
+    
   </body>
 </html>
