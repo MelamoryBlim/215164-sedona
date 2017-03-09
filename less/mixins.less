@@ -1,0 +1,21 @@
+.const_font() {
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.var_font(@font-size; @line-height; @font-weight; @color) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+  color: @color;
+}
+
+.var_font(form; @font-size; @line-height; @font-weight; @color) {
+  font-family: "PT Sans", sans-serif;
+  text-transform: none;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+  color: @color;
+}
+
