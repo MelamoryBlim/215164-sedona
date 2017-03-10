@@ -19,3 +19,49 @@
   color: @color;
 }
 
+.grey_color() {
+  background-color: @grey;
+  border: 3px solid @grey;
+  
+  &:hover {
+    background-color: @grey_hvr;
+    border: 3px solid @grey_hvr;
+  }
+  
+  &:focus {
+    background-color: @white;
+  }
+}
+
+.grey_color(var) {
+  background-color: @grey;
+  
+  &:hover {
+    background-color: @grey_hvr;
+  }
+  
+  &:active {
+    background-color: @grey_down;
+  }
+}
+
+.blue_color() {
+  background-color: @blue;
+  
+  &:hover {
+    background-color: @blue_hvr;
+  }
+  
+  &:active {
+    background-color: @blue_down;
+  }  
+}
+
+.blue_color(var) {
+  .blue_color();
+  
+  &:disabled {
+    background-color: @grey;
+  }
+}
+
