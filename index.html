@@ -2,39 +2,43 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet"/> 
   </head>
-  <body>
+  <body class="page">
    
    <!-- HEADER -->
    
     <header class="page-header">
-      <h1 class="visually-hidden">Седона</h1>
-      <a class="page-header__logo" href="index.html">
-        <img src="http://placehold.it/102x83" width="102" height="83" alt="Седона"/>
-      </a>
-      <nav class="main-menu  main-menu--closed">
-        <button class="main-menu__toggle" type="button">Открыть меню</button>
-        <ul class="main-menu__list">
-          <li class="main-menu__item">
-            <a class="main-menu__link  main-menu__link--active" href="#">Главная</a>   
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Фото и видео</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Форма отзыва</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>           
+      <div class="page-header__wrapper">
+        <h1 class="visually-hidden">Седона</h1>
+        <a class="page-header__logo" href="index.html">
+          <img src="http://placehold.it/102x83" width="102" height="83" alt="Седона"/>
+        </a>
+        <nav class="main-menu  main-menu--closed">
+          <button class="main-menu__toggle" type="button">Открыть меню</button>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link  main-menu__link--active">Главная</a>   
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>           
     </header>
     
     <!-- MAIN -->
     
-    <main>
+    <main class="page-main">
      
       <!-- Intro -->
     
@@ -54,7 +58,7 @@
           </p>
         </header>
         <div class="advantage advantage--main">
-          <h2 class="advantage__title">
+          <h2 class="advantage__title advantage__title--main">
             Настоящий городок
           </h2>
           <div class="advantage__number">
@@ -67,7 +71,7 @@
             <img src="http://placehold.it/320x260" width="320" height="260" alt="Sedona city"/>
           </div>
           <div class="advantage__details">
-            <div class="detail  detail-hotels">
+            <div class="detail  detail--hotels">
               <h3 class="detail__title">
                 Жилье
               </h3>
@@ -75,7 +79,7 @@
                 Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </div>
-            <div class="detail  detail-souvenirs">
+            <div class="detail  detail--souvenirs">
               <h3 class="detail__title">
                 Сувениры
               </h3>
@@ -83,7 +87,7 @@
                 Не только китайского, но и местного производства!
               </p>
             </div>
-            <div class="detail  detail-food">
+            <div class="detail  detail--food">
               <h3 class="detail__title">
                 Еда
               </h3>
@@ -94,7 +98,7 @@
           </div>
         </div>
         <div class="advantage advantage--main">
-          <h2 class="advantage__title">
+          <h2 class="advantage__title advantage__title--main">
             Там есть Мост Дьявола
           </h2>
           <div class="advantage__number">
@@ -144,21 +148,21 @@
       
       <!-- Seach Hotel -->
       
-      <section class="seach-hotel">
+      <section class="search-hotel">
         <header class="section-header">
           <h1 class="section-header__title">Заинтересовались?</h1>
           <p class="section-header__text">
             Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
         </header>
-        <a class="button seach-hotel__button" href="#">Найти гостиницу</a>
+        <a class="button search-hotel__button" href="#">Найти гостиницу</a>
       </section>
       
       <!-- Map -->
       
       <section class="map">
         <h1 class="visually-hidden">Карта Седоны</h1>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997299.7144807024!2d-112.3648394329299!3d34.80891411316554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1488726370240" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997299.7144807024!2d-112.3648394329299!3d34.80891411316554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1488726370240" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
 
     </main>
@@ -166,18 +170,20 @@
     <!-- FOOTER -->
     
     <footer class="page-footer">
-      <div class="page-footer__heshtag">#VISITSEDONA</div>
-      <div class="page-footer__social  social-links">        
-        <a class="social-link  social-link--tw" href="#">Twitter</a>
-        <a class="social-link  social-link--fb" href="#">Facebook</a>
-        <a class="social-link  social-link--yt" href="#">YouTube</a>      
-      </div>
-      <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">Разработано</span>
-        <a class="page-footer__copyright-link" href="#">
-          <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"/>
-        </a>
-      </div>      
+      <div class="page-footer__wrapper">
+        <div class="page-footer__heshtag">#VISITSEDONA</div>
+        <div class="page-footer__social  social-links">        
+          <a class="social-link  social-link--tw" href="#">Twitter</a>
+          <a class="social-link  social-link--fb" href="#">Facebook</a>
+          <a class="social-link  social-link--yt" href="#">YouTube</a>      
+        </div>
+        <div class="page-footer__copyright">
+          <span class="page-footer__copyright-text">Разработано</span>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
+            <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"/>
+          </a>
+        </div>  
+      </div>    
     </footer>
   </body>
 </html>
