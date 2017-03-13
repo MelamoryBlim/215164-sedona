@@ -7,11 +7,11 @@
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body class="page">
+    <div class="page_wrapper">
    
-   <!-- HEADER -->
+      <!-- HEADER -->
    
-    <header class="page-header">
-      <div class="page-header__wrapper">
+      <header class="page-header">
         <h1 class="visually-hidden">Седона</h1>
         <a class="page-header__logo" href="index.html">
           <img src="http://placehold.it/102x83" width="102" height="83" alt="Седона"/>
@@ -32,32 +32,30 @@
               <a class="main-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
-        </nav> 
-      </div>       
-    </header>
+        </nav>    
+      </header>
     
-    <!-- MAIN -->
+      <!-- MAIN -->
     
-    <main class="page-main">
+      <main class="page-main">
      
-      <!-- Intro -->
+        <!-- Intro -->
     
-      <div class="intro">
-        <div class="intro__image  intro__image--min">
-          <img src="http://placehold.it/229x39" width="229" height="39" alt="Sedona"/>
+        <div class="intro">
+          <div class="intro__image  intro__image--min">
+            <img src="http://placehold.it/229x39" width="229" height="39" alt="Sedona"/>
+          </div>
         </div>
-      </div>
       
-      <!-- Form -->
+        <!-- Form -->
       
-      <section class="feedback">        
-        <header class="section-header">
-          <h1 class="section-header__title">Оставьте свой отзыв</h1>
-          <p class="section-header__text">
-            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
-          </p>
-        </header>
-        <div class="feedback__wrapper">
+        <section class="feedback">        
+          <header class="section-header">
+            <h1 class="section-header__title">Оставьте свой отзыв</h1>
+            <p class="section-header__text">
+              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+            </p>
+          </header>
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form-fieldset">
               <div class="form-fieldset__title">Представьтесь:</div>
@@ -101,14 +99,12 @@
             </div>
             <input class="button form__button" type="submit" value="Отправить отзыв"/>
           </form>  
-        </div>      
-      </section>      
-    </main>
+        </section>      
+      </main>
     
-    <!-- FOOTER -->
+      <!-- FOOTER -->
     
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <footer class="page-footer">
         <div class="page-footer__heshtag">#VISITSEDONA</div>
         <div class="page-footer__social  social-links">        
           <a class="social-link  social-link--tw" href="#">Twitter</a>
@@ -121,30 +117,30 @@
             <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"/>
           </a>
         </div>  
-      </div>    
-    </footer>
+      </footer>
     
-    <!-- POP UP -->
+      <!-- POP UP -->
     
-    <section class="success-popup">
-      <header class="section-header">
-        <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
-        <p class="section-header__text">
-          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
-        </p>
-        <button class="button  success-popup__button">Закрыть окно</button>
-      </header>
-    </section>
+      <section class="success-popup">
+        <header class="section-header">
+          <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
+          <p class="section-header__text">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+          </p>
+          <button class="button  success-popup__button">Закрыть окно</button>
+        </header>
+      </section>
+      
+      <section class="failure-popup">
+        <header class="section-header">
+          <h1 class="section-header__title">Что-то пошло не так!</h1>
+          <p class="section-header__text">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+          <button class="button  failure-popup__button">Ok</button>
+        </header>
+      </section>
     
-    <section class="failure-popup">
-      <header class="section-header">
-        <h1 class="section-header__title">Что-то пошло не так!</h1>
-        <p class="section-header__text">
-          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-        </p>
-        <button class="button  failure-popup__button">Ok</button>
-      </header>
-    </section>
-    
+    </div>
   </body>
 </html>

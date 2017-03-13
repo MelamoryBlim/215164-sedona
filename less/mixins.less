@@ -65,6 +65,19 @@
   }
 }
 
+.wrapper() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-width {
+    width: 768px;
+  }
+
+  @media @desktop-width {
+    width: 1200px;
+  }
+}
+
 .flex_column() {
   display: flex;
   flex-direction: column;
