@@ -1,10 +1,14 @@
 .page-footer {
-  .flex_column();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 35px;
   padding-bottom: 35px;
 
   @media @tablet_width {
-    .flex_row();
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
   }
 }
