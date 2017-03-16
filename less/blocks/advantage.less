@@ -1,6 +1,17 @@
 .advantage {
+  padding: 0 65px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  box-sizing: border-box;
+  
   background-color: @light_grey;
   text-align: center;
+  
+  @media @tablet_width {    
+    padding-top: 50px;
+    padding-bottom: 55px;
+    width: 33%;
+  }
 }
 
 .advantage--main {
@@ -9,10 +20,24 @@
 }
 
 .advantage__title {
+  margin: 0;
+  margin-bottom: 20px;
+  
   .var_font(21px; 26px; 700; @black);
 }
 
 .advantage__title--main {
   color: @white;
 }
+
+.advantage__number {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantage__text {
+  margin: 0;
+}
+
+
 
