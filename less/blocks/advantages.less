@@ -18,3 +18,20 @@
     margin-bottom: 60px;
   }
 }
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  @media @tablet_width {
+    flex-direction: row;
+  }
+}
+
+.advantages__container--reverse {
+  @media @tablet_width {
+    flex-direction: row-reverse;
+  }
+}
