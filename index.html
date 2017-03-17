@@ -14,7 +14,7 @@
       <header class="page-header">
         <h1 class="visually-hidden">Седона</h1>
 
-        <nav class="main-menu  main-menu--closed">
+        <nav class="main-menu  main-menu--closed  main-menu--nojs">
           <button class="main-menu__toggle" type="button">Открыть меню</button>
           <ul class="main-menu__list">
             <li class="main-menu__item  main-menu__item--active">
@@ -190,5 +190,21 @@
         </div>
       </footer>
     </div>
+    <script src="js/main-menu.js" async>
+      var menuMain = document.querySelector('.main-menu');
+      var menuToggle = document.querySelector('.main-menu__toggle');
+
+      menuMain.classList.remove('main-menu--nojs');
+
+      menuToggle.addEventListener('click', function() {
+        if (menuMain.classList.contains('main-menu--closed')) {
+          menuMain.classList.remove('main-menu--closed');
+          menuMain.classList.add('main-menu--opened');
+        } else {
+            menuMain.classList.add('main-menu--closed');
+            menuMain.classList.remove('main-menu--opened');
+          }
+      });
+    </script>
   </body>
 </html>
