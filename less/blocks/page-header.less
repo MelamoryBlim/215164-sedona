@@ -1,6 +1,24 @@
 .page-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet_width {
+    height: 55px;
+  }
 }
 
 .page-header__logo {
   align-self: center;
+  margin-bottom: -35px;
+
+  @media @tablet_width {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    margin-left: -51px;
+  }
 }
+
