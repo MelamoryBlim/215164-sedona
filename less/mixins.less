@@ -65,6 +65,30 @@
   }
 }
 
+.menu_color() {
+  color: @black;
+  
+  &:hover {
+    color: @blue_hvr;
+  }
+  
+  &:active {
+    color: @grey_down;
+  }
+}
+
+.menu_color(active) {
+  color: @brown;
+  
+  &:hover {
+    color: @brown_hvr;
+  }
+  
+  &:active {
+    color: @grey_down;
+  }
+}
+
 .wrapper() {
   min-width: 320px;
   margin: 0 auto;
