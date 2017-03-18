@@ -1,8 +1,33 @@
+.photo {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 25px 20px;
+  
+  border-top: 1px solid @light_grey;
+}
+
+.photo:last-of-type {  
+  border-bottom: 1px solid @light_grey;
+}
+
+.photo__description { 
+  margin: 0;
+  padding: 0;
+  width: 280px;
+}
+
 .photo__title,
 .photo__stats {
   .var_font(14px; 24px; 700; @black);
 }
 
-.photo__author {
+.photo__author {  
+  margin-bottom: 10px;
   text-transform: none;
+}
+
+.photo__stats {
+  padding-left: 35px;
 }
