@@ -1,8 +1,47 @@
 .feedback-form {
-  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  margin-bottom: 40px;
+
+  @media @tablet_width {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-top: 50px;
+    width: 85%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  @media @desktop_width {
+    padding-top: 75px;
+  }
+}
+
+.feedback-form .section_header {
+  margin-bottom: 25px;
+
+  @media @tablet_width {
+    padding-top: 50px;
+  }
+
+  @media @desktop_width {
+    padding-top: 75px;
+  }
 }
 
 .form__button {
   .const_font();
   .var_font(21px; 26px; 700; @white);
 }
+
+.feedback-form__note {
+  @media @mobile_width {
+    display: none;
+  }
+
+  margin-left: auto;
+}
+

@@ -57,24 +57,28 @@
               Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
             </p>
           </header>
+
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--name">
               <div class="form-fieldset__title">Представьтесь:</div>
               <label class="form-fieldset__label" for="first name">Имя*:</label>
               <input class="form-fieldset__input" type="text" name="first name" id="first name" placeholder="Петр" required/>
+
               <label class="form-fieldset__label" for="last name">Фамилия*:</label>
               <input class="form-fieldset__input" type="text" name="last name" id="last name" placeholder="Иванов" required/>
+
               <label class="form-fieldset__label" for="middle name">Отчество:</label>
               <input class="form-fieldset__input" type="text" name="middle name" id="middle name" placeholder="Александрович"/>
+
             </div>
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--contacts">
               <div class="form-fieldset__title">Контактная информация:</div>
-              <label class="form-fieldset__label" for="phone number">Контактный телефон*:</label>
+              <label class="form-fieldset__label" for="phone number">Телефон*:</label>
               <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
               <label class="form-fieldset__label" for="email">Электронная почта*:</label>
               <input class="form-fieldset__input" type="email" name="email" id="email" placeholder="Введите e-mail" required/>
             </div>
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--impressions">
               <div class="form-fieldset__title">Ваше общее впечатление:</div>
               <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
               <label class="form-fieldset__label  form-fieldset__label--bold" for="positive">Скорее положительное</label>
@@ -83,8 +87,8 @@
               <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
               <label class="form-fieldset__label  form-fieldset__label--bold" for="unknown">Затрудняюсь ответить</label>
             </div>
-            <div class="form-fieldset">
-              <div class="form-fieldset__title">Посещенные достопримечательности:</div>
+            <div class="form-fieldset  form-fieldset--attractions">
+              <div class="form-fieldset__title">Посещенные <br/> достопримечательности:</div>
               <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
               <label class="form-fieldset__label  form-fieldset__label--bold" for="devil's bridge">Мост Дьявола</label>
               <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
@@ -95,10 +99,13 @@
               <label class="form-fieldset__label  form-fieldset__label--bold" for="red rocks">Красные скалы</label>
             </div>
             <div class="form-fieldset">
-              <div class="form-fieldset__title">Опишите свои эмоции:</div>
+              <div class="form-fieldset__title  form-fieldset--emotions">Опишите свои эмоции:</div>
               <textarea class="form-fieldset__text" placeholder="Опишите подробно все свои восторги" rows="6"></textarea>
             </div>
             <input class="button form__button" type="submit" value="Отправить отзыв"/>
+            <div class="feedback-form__note">
+              * - Обязательные поля
+            </div>
           </form>
         </section>
       </main>
@@ -127,7 +134,7 @@
           <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
           <p class="section-header__text">
             Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
-          </p>          
+          </p>
         </header>
         <div class="success-popup__wrapper">
           <button class="button  success-popup__button">Закрыть окно</button>
@@ -139,7 +146,7 @@
           <h1 class="section-header__title">Что-то пошло не так!</h1>
           <p class="section-header__text">
             Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-          </p>          
+          </p>
         </header>
         <button class="button  failure-popup__button">Ok</button>
       </section>
