@@ -5,6 +5,7 @@
 
   @media @tablet_width {
     width: 80%;
+    max-width: 800px;
   }
 }
 
@@ -23,6 +24,18 @@
   width: 80%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  @media @tablet_width {
+    left: 0;
+    bottom: 0;
+
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .player__volume {
@@ -30,6 +43,10 @@
   width: 100%;
 
   background-color: rgba(0, 0, 0, 0.5);
+
+  @media @tablet_width {
+    background: none;
+  }
 }
 
 .player__bar {
@@ -45,7 +62,7 @@
   top: 50%;
   left: 20%;
 
-  margin-top: -6px;
+  margin-top: -5px;
   width: 10px;
   height: 10px;
 
@@ -63,14 +80,36 @@
   cursor: pointer;
   border: none;
   background-color: red;
+
+  @media @tablet_width {
+    margin: 35px 0;
+  }
 }
 
 .player__replay {
   margin-left: 20px;
   margin-right: auto;
+
+  @media @tablet_width {
+    order: -1;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+}
+
+.player__subtitles {
+  width: 35px;
+
+  @media @tablet_width {
+    margin-left: 20px;
+  }
 }
 
 .player__fullscreen {
   margin-left: 30px;
   margin-right: 20px;
+
+  @media @tablet_width {
+    margin-right: 30px;
+  }
 }
