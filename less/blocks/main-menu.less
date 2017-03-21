@@ -1,37 +1,134 @@
 .main-menu {
+  position: relative;
+
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
+
   &__item {
     margin: 0;
     padding: 0;
   }
 }
 
-.main-menu__toggle {
-  width: 25px;
-  height: 25px;
-  
-  font-size: 0;
-  
-  cursor: pointer;
-  border: none;
-  background-color: @grey_btn;
+.main-menu--closed .main-menu__item {
+  display: none;
+
+  @media @tablet_width {
+    display: block;
+  }
 }
 
-.main-menu__link {
+.main-menu--opened .main-menu__item {
   display: block;
-  margin: 0;
-  padding: 8px 0;
-  width: 100%;
-  
-  .var_font(18px; 40px; 700; @white);
-  
-  .blue_color();  
+}
+
+.main-menu__toggle {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  z-index: 10;
+
+  width: 25px;
+  height: 25px;
+
+  font-size: 0;
+
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  @media @tablet_width {
+    display: none;
+  }
+}
+
+.main-menu__toggle::before,
+.main-menu__toggle::after {
+  .pseudo();
+}
+
+.main-menu--closed .main-menu__toggle::before {
+  top: 0;
+  left: 0;
+
+  width: 25px;
+  height: 5px;
+
+  background-color: @blue;
+  box-shadow: 0 10px 0 0 @blue,
+              0 20px 0 0 @blue;
+}
+
+.main-menu--opened .main-menu__toggle::before,
+.main-menu--opened .main-menu__toggle::after {
+  top: 10px;
+  left: 0;
+
+  width: 30px;
+  height: 5px;
+
+  background-color: @white;
+
+  transform: rotate(45deg);
+}
+
+.main-menu--opened .main-menu__toggle::after {
+  transform: rotate(-45deg);
+}
+
+.main-menu__list {
+  @media @tablet_width {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-menu__item {
+  @media @tablet_width {
+    padding: 14px 0;    
+    width: 20%;
+    
+    text-align: center;
+  }
+}
+
+.main-menu__item:nth-of-type(2) {
+  @media @tablet_width {
+    margin-right: auto;
+  }
+}
+
+.main-menu__link {  
   text-decoration: none;
-  text-align: center;
-  border-bottom: 1px solid @grey_bord;
+  text-align: center;  
+  
+  @media @mobile_width {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+  
+    .var_font(18px; 40px; 700; @white);
+  
+    .blue_color();
+    border-bottom: 1px solid @grey_bord;
+  }
+  
+  @media @tablet_width {
+    display: inline;
+    padding: 0;
+    
+    font-weight: 700;
+    
+    .menu_color();
+  }
+}
+
+.main-menu__item--active .main-menu__link {
+  @media @tablet_width {
+    .menu_color(active);
+  }
 }

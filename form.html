@@ -7,75 +7,78 @@
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body class="page">
-   
-   <!-- HEADER -->
-   
-    <header class="page-header">
-      <div class="page-header__wrapper">
+    <div class="page__wrapper">
+
+      <!-- HEADER -->
+
+      <header class="page-header">
         <h1 class="visually-hidden">Седона</h1>
-        <a class="page-header__logo" href="index.html">
-          <img src="http://placehold.it/102x83" width="102" height="83" alt="Седона"/>
-        </a>
-        <nav class="main-menu  main-menu--closed">
+
+        <nav class="main-menu  main-menu--closed  main-menu--nojs">
           <button class="main-menu__toggle" type="button">Открыть меню</button>
           <ul class="main-menu__list">
             <li class="main-menu__item">
-              <a class="main-menu__link" href="index.html">Главная</a>   
+              <a class="main-menu__link" href="index.html">Главная</a>
             </li>
             <li class="main-menu__item">
               <a class="main-menu__link" href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link  main-menu__link--active">Форма отзыва</a>
+            <li class="main-menu__item  main-menu__item--active">
+              <a class="main-menu__link">Форма отзыва</a>
             </li>
             <li class="main-menu__item">
               <a class="main-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
-        </nav> 
-      </div>       
-    </header>
-    
-    <!-- MAIN -->
-    
-    <main class="page-main">
-     
-      <!-- Intro -->
-    
-      <div class="intro">
-        <div class="intro__image  intro__image--min">
-          <img src="http://placehold.it/229x39" width="229" height="39" alt="Sedona"/>
+        </nav>
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"/>
+        </a>
+      </header>
+
+      <!-- MAIN -->
+
+      <main class="page-main">
+
+        <!-- Intro -->
+
+        <div class="intro">
+          <div class="intro__image  intro__image--min">
+            <img src="http://placehold.it/229x39" width="229" height="39" alt="Sedona"/>
+          </div>
         </div>
-      </div>
-      
-      <!-- Form -->
-      
-      <section class="feedback">        
-        <header class="section-header">
-          <h1 class="section-header__title">Оставьте свой отзыв</h1>
-          <p class="section-header__text">
-            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
-          </p>
-        </header>
-        <div class="feedback__wrapper">
+
+        <!-- Form -->
+
+        <section class="feedback">
+          <header class="section-header">
+            <h1 class="section-header__title">Оставьте свой отзыв</h1>
+            <p class="section-header__text">
+              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+            </p>
+          </header>
+
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--name">
               <div class="form-fieldset__title">Представьтесь:</div>
               <label class="form-fieldset__label" for="first name">Имя*:</label>
               <input class="form-fieldset__input" type="text" name="first name" id="first name" placeholder="Петр" required/>
+
               <label class="form-fieldset__label" for="last name">Фамилия*:</label>
               <input class="form-fieldset__input" type="text" name="last name" id="last name" placeholder="Иванов" required/>
+
               <label class="form-fieldset__label" for="middle name">Отчество:</label>
               <input class="form-fieldset__input" type="text" name="middle name" id="middle name" placeholder="Александрович"/>
+
             </div>
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--contacts">
               <div class="form-fieldset__title">Контактная информация:</div>
-              <label class="form-fieldset__label" for="phone number">Контактный телефон*:</label>
+              <label class="form-fieldset__label" for="phone number">Телефон*:</label>
               <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
               <label class="form-fieldset__label" for="email">Электронная почта*:</label>
               <input class="form-fieldset__input" type="email" name="email" id="email" placeholder="Введите e-mail" required/>
             </div>
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--impressions">
               <div class="form-fieldset__title">Ваше общее впечатление:</div>
               <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
               <label class="form-fieldset__label  form-fieldset__label--bold" for="positive">Скорее положительное</label>
@@ -84,8 +87,8 @@
               <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
               <label class="form-fieldset__label  form-fieldset__label--bold" for="unknown">Затрудняюсь ответить</label>
             </div>
-            <div class="form-fieldset">
-              <div class="form-fieldset__title">Посещенные достопримечательности:</div>
+            <div class="form-fieldset  form-fieldset--attractions">
+              <div class="form-fieldset__title">Посещенные <br/> достопримечательности:</div>
               <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
               <label class="form-fieldset__label  form-fieldset__label--bold" for="devil's bridge">Мост Дьявола</label>
               <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
@@ -96,55 +99,74 @@
               <label class="form-fieldset__label  form-fieldset__label--bold" for="red rocks">Красные скалы</label>
             </div>
             <div class="form-fieldset">
-              <div class="form-fieldset__title">Опишите свои эмоции:</div>
+              <div class="form-fieldset__title  form-fieldset--emotions">Опишите свои эмоции:</div>
               <textarea class="form-fieldset__text" placeholder="Опишите подробно все свои восторги" rows="6"></textarea>
             </div>
             <input class="button form__button" type="submit" value="Отправить отзыв"/>
-          </form>  
-        </div>      
-      </section>      
-    </main>
-    
-    <!-- FOOTER -->
-    
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+            <div class="feedback-form__note">
+              * - Обязательные поля
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+
+      <footer class="page-footer">
         <div class="page-footer__heshtag">#VISITSEDONA</div>
-        <div class="page-footer__social  social-links">        
-          <a class="social-link  social-link--tw" href="#">Twitter</a>
-          <a class="social-link  social-link--fb" href="#">Facebook</a>
-          <a class="social-link  social-link--yt" href="#">YouTube</a>      
+        <div class="page-footer__social  social-links">
+          <a class="social-link  social-link--tw  social-links__item" href="#">Twitter</a>
+          <a class="social-link  social-link--fb  social-links__item" href="#">Facebook</a>
+          <a class="social-link  social-link--yt  social-links__item" href="#">YouTube</a>
         </div>
         <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">Разработано</span>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
             <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"/>
           </a>
-        </div>  
-      </div>    
-    </footer>
-    
-    <!-- POP UP -->
-    
-    <section class="success-popup">
-      <header class="section-header">
-        <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
-        <p class="section-header__text">
-          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
-        </p>
-        <button class="button  success-popup__button">Закрыть окно</button>
-      </header>
-    </section>
-    
-    <section class="failure-popup">
-      <header class="section-header">
-        <h1 class="section-header__title">Что-то пошло не так!</h1>
-        <p class="section-header__text">
-          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-        </p>
+        </div>
+      </footer>
+
+      <!-- POP UP -->
+
+      <section class="success-popup">
+        <header class="section-header">
+          <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
+          <p class="section-header__text">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+          </p>
+        </header>
+        <div class="success-popup__wrapper">
+          <button class="button  success-popup__button">Закрыть окно</button>
+        </div>
+      </section>
+
+      <section class="failure-popup">
+        <header class="section-header">
+          <h1 class="section-header__title">Что-то пошло не так!</h1>
+          <p class="section-header__text">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+        </header>
         <button class="button  failure-popup__button">Ok</button>
-      </header>
-    </section>
-    
+      </section>
+
+    </div>
+    <script src="js/main-menu.js" async>
+      var menuMain = document.querySelector('.main-menu');
+      var menuToggle = document.querySelector('.main-menu__toggle');
+
+      menuMain.classList.remove('main-menu--nojs');
+
+      menuToggle.addEventListener('click', function() {
+        if (menuMain.classList.contains('main-menu--closed')) {
+          menuMain.classList.remove('main-menu--closed');
+          menuMain.classList.add('main-menu--opened');
+        } else {
+            menuMain.classList.add('main-menu--closed');
+            menuMain.classList.remove('main-menu--opened');
+          }
+      });
+    </script>
   </body>
 </html>

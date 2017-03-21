@@ -1,6 +1,29 @@
 .videoplayer {
-  .flex_column();
-  padding-top: 40px;
-  padding-bottom: 50px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 100px;
+
+  @media @tablet_width {
+    padding-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  @media @desktop_width {
+    padding-top: 70px;
+    margin-bottom: 80px;
+  }
+}
+
+.videoplayer .section-header {
+  margin-bottom: 35px;
+
+  @media @tablet_width {
+    margin-bottom: 55px;
+  }
+
+  @media @desktop_width {
+    margin-bottom: 75px;
+  }
 }

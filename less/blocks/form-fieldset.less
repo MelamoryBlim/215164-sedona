@@ -1,11 +1,74 @@
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  box-sizing: border-box;
+  width: 100%;
+
+  border-top: 1px solid @light_grey;
+
+  @media @tablet_width {
+    padding: 0;
+    padding-bottom: 25px;
+
+    border: none;
+  }
+}
+
+.form-fieldset--name,
+.form-fieldset--impressions {
+  @media @tablet_width {
+    width: 50%;
+  }
+}
+
+.form-fieldset--impressions {
+  @media @tablet_width {
+    order: -1;
+  }
+}
+
+.form-fieldset--contacts {
+  @media @desktop_width {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.form-fieldset--contacts .form-fieldset__input[type="tel"] {
+  @media @desktop_width {
+    margin-right: auto;
+  }
+}
+
+.form-fieldset--attractions {
+  @media @tablet_width {
+    flex-flow: row wrap;
+  }
+}
+
+.form-fieldset--attractions .form-fieldset__label {
+  padding-left: 85px;
+  box-sizing: border-box;
+}
+
 .form-fieldset__title {
+  width: 100%;
+
   .var_font(21px; 26px; 700; @black);
+
+  text-align: center;
 }
 
 .form-fieldset__input,
 .form-fieldset__text {
   .var_font(form; 18px; 26px; 700; @black);
   .grey_color();
+}
+
+.form-fieldset__radio,
+.form-fieldset__checkbox {
+  display: none;
 }
 
 .form-fieldset__label--bold {
