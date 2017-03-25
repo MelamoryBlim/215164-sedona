@@ -1,4 +1,6 @@
 .advantage {
+  position: relative;
+
   padding-top: 40px;
   padding-bottom: 45px;
   box-sizing: border-box;
@@ -9,13 +11,38 @@
   @media @tablet_width {
     padding-top: 50px;
     padding-bottom: 55px;
-    width: 33%;
+    width: 33.33%;
   }
 }
 
 .advantage--main {
   background-color: @blue;
   color: @white;
+}
+
+.advantage--triangle {
+  @media @mobile_width {
+    padding-top: 90px;
+
+    background-image: url(../../img/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+}
+
+.advantage--border::after {
+  @media @mobile_width {
+    .pseudo();
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 0);
+    width: 90%;
+    height: 1px;
+
+    background-color: @grey_down;
+  }
 }
 
 .advantage__title {
@@ -37,6 +64,7 @@
 .advantage__text {
   margin: 0;
 }
+
 
 
 

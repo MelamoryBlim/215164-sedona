@@ -25,6 +25,14 @@
   display: block;
 }
 
+.main-menu--nojs .main-menu__item {
+  display: block;
+}
+
+.main-menu--nojs .main-menu__toggle {
+  display: none;
+}
+
 .main-menu__toggle {
   position: absolute;
   top: 15px;
@@ -89,9 +97,9 @@
 
 .main-menu__item {
   @media @tablet_width {
-    padding: 14px 0;    
+    padding: 14px 0;
     width: 20%;
-    
+
     text-align: center;
   }
 }
@@ -102,27 +110,27 @@
   }
 }
 
-.main-menu__link {  
+.main-menu__link {
   text-decoration: none;
-  text-align: center;  
-  
+
   @media @mobile_width {
     display: block;
     margin: 0;
     padding: 8px 0;
-  
+
     .var_font(18px; 40px; 700; @white);
-  
+
     .blue_color();
+    text-align: center;
     border-bottom: 1px solid @grey_bord;
   }
-  
+
   @media @tablet_width {
     display: inline;
     padding: 0;
-    
+
     font-weight: 700;
-    
+
     .menu_color();
   }
 }

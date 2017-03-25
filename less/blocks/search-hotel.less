@@ -1,11 +1,18 @@
 .search-hotel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 35px;
   padding-bottom: 50px;
+
+  @media @tablet_width {
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
+}
+
+.search-hotel__header {
+  margin-bottom: 40px;
 }
 
 .search-hotel__button {
-  margin-top: 40px;
+  display: block;
+  margin: 0 auto;
 }
