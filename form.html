@@ -65,46 +65,70 @@
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form-fieldset  form-fieldset--name">
               <div class="form-fieldset__title">Представьтесь:</div>
-              <label class="form-fieldset__label" for="first name">Имя*:</label>
-              <input class="form-fieldset__input" type="text" name="first name" id="first name" placeholder="Петр" required/>
-
-              <label class="form-fieldset__label" for="last name">Фамилия*:</label>
-              <input class="form-fieldset__input" type="text" name="last name" id="last name" placeholder="Иванов" required/>
-
-              <label class="form-fieldset__label" for="middle name">Отчество:</label>
-              <input class="form-fieldset__input" type="text" name="middle name" id="middle name" placeholder="Александрович"/>
-
+              <div class="form-fieldset__wrapper  form-fieldset__wrapper--name">
+                <label class="form-fieldset__label" for="first name">Имя*:</label>
+                <input class="form-fieldset__input" type="text" name="first name" id="first name" placeholder="Петр" required/>
+              </div>
+              <div class="form-fieldset__wrapper  form-fieldset__wrapper--name">
+                <label class="form-fieldset__label" for="last name">Фамилия*:</label>
+                <input class="form-fieldset__input" type="text" name="last name" id="last name" placeholder="Иванов" required/>
+              </div>
+              <div class="form-fieldset__wrapper  form-fieldset__wrapper--name">
+                <label class="form-fieldset__label" for="middle name">Отчество:</label>
+                <input class="form-fieldset__input" type="text" name="middle name" id="middle name" placeholder="Александрович"/>
+              </div>
             </div>
             <div class="form-fieldset  form-fieldset--contacts">
               <div class="form-fieldset__title">Контактная информация:</div>
-              <label class="form-fieldset__label" for="phone number">Телефон*:</label>
-              <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
-              <label class="form-fieldset__label" for="email">Электронная почта*:</label>
-              <input class="form-fieldset__input" type="email" name="email" id="email" placeholder="Введите e-mail" required/>
+              <div class="form-fieldset__wrapper  form-fieldset__wrapper--contacts  form-fieldset__wrapper--phone">
+                <label class="form-fieldset__label" for="phone number">Телефон*:</label>
+                <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+                <div class="form-fieldset__error">
+                  Ошибка, перепроверьте номер
+                </div>
+              </div>
+              <div class="form-fieldset__wrapper  form-fieldset__wrapper--contacts  form-fieldset__wrapper--mail">
+                <label class="form-fieldset__label" for="email">Электронная почта*:</label>
+                <input class="form-fieldset__input" type="email" name="email" id="email" placeholder="Введите e-mail" required/>
+              </div>
             </div>
             <div class="form-fieldset  form-fieldset--impressions">
               <div class="form-fieldset__title">Ваше общее впечатление:</div>
-              <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="positive">Скорее положительное</label>
-              <input class="form-fieldset__radio" type="radio" name="impression" id="negative" value="negative"/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="negative">Скорее отрицательное</label>
-              <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="unknown">Затрудняюсь ответить</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--radio" for="positive">
+                <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
+                Скорее положительное
+              </label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--radio" for="negative">
+                <input class="form-fieldset__radio" type="radio" name="impression" id="negative" value="negative"/>
+                Скорее отрицательное
+              </label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--radio" for="unknown">
+                <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
+                Затрудняюсь ответить
+              </label>
             </div>
             <div class="form-fieldset  form-fieldset--attractions">
               <div class="form-fieldset__title">Посещенные <br/> достопримечательности:</div>
-              <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="devil's bridge">Мост Дьявола</label>
-              <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="slide park">Слайд-парк</label>
-              <input class="form-fieldset__checkbox" type="checkbox" name="mountain bell" id="mountain bell"/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="mountain bell">Гора-Колокол</label>
-              <input class="form-fieldset__checkbox" type="checkbox" name="red rocks" id="red rocks" checked/>
-              <label class="form-fieldset__label  form-fieldset__label--bold" for="red rocks">Красные скалы</label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="devil's bridge">
+                <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
+                Мост Дьявола
+              </label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="slide park">
+                <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
+                Слайд-парк
+              </label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="mountain bell">
+                <input class="form-fieldset__checkbox" type="checkbox" name="mountain bell" id="mountain bell"/>
+                Гора-Колокол
+              </label>
+              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="red rocks">
+                <input class="form-fieldset__checkbox" type="checkbox" name="red rocks" id="red rocks" checked/>
+                Красные скалы
+              </label>
             </div>
-            <div class="form-fieldset">
+            <div class="form-fieldset  form-fieldset--text">
               <div class="form-fieldset__title  form-fieldset--emotions">Опишите свои эмоции:</div>
-              <textarea class="form-fieldset__text" placeholder="Опишите подробно все свои восторги" rows="6"></textarea>
+              <textarea class="form-fieldset__text" placeholder="Опишите подробно все свои восторги" rows="4"></textarea>
             </div>
             <input class="button form__button" type="submit" value="Отправить отзыв"/>
             <div class="feedback-form__note">
@@ -174,3 +198,4 @@
     </script>
   </body>
 </html>
+

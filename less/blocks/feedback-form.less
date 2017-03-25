@@ -1,18 +1,17 @@
 .feedback-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 25px;
   margin-bottom: 40px;
 
+  text-align: center;
+
   @media @tablet_width {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
     padding-top: 50px;
+    margin: 0 auto;
     width: 85%;
     max-width: 960px;
-    margin: 0 auto;
   }
 
   @media @desktop_width {
@@ -32,4 +31,5 @@
 
   margin-left: auto;
 }
+
 

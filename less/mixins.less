@@ -10,6 +10,14 @@
   color: @color;
 }
 
+.var_font(error; @font-size; @line-height; @font-weight; @color) {
+  text-transform: none;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+  color: @color;
+}
+
 .var_font(form; @font-size; @line-height; @font-weight; @color) {
   font-family: "PT Sans", sans-serif;
   text-transform: none;
@@ -67,11 +75,11 @@
 
 .menu_color() {
   color: @black;
-  
+
   &:hover {
     color: @blue_hvr;
   }
-  
+
   &:active {
     color: @grey_down;
   }
@@ -79,11 +87,11 @@
 
 .menu_color(active) {
   color: @brown;
-  
+
   &:hover {
     color: @brown_hvr;
   }
-  
+
   &:active {
     color: @grey_down;
   }
