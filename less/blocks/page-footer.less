@@ -49,7 +49,18 @@
   font-size: 14px;
 }
 
-.page-footer__copyright-link img {
+.page-footer__copyright-link {
+  &:hover .page-footer__copyright-img {
+    fill: @blue_hvr;
+  }
+
+  &:active .page-footer__copyright-img {
+    fill: @grey_down;
+  }
+}
+
+.page-footer__copyright-img {
   display: block;
 }
+
 
