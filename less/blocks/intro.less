@@ -1,26 +1,20 @@
 .intro {
   overflow: hidden;
 
+  background-image: url(../../img/bg-back-mobile@1x.jpg);
   background-color: @blue;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @media @mobile_width {
-    background-image: url(../../img/bg-intro-triangle-mobile.svg), url(../../img/bg-back-mobile@1x.jpg);
-  }
-
   @media @tablet_width {
-    background-image: url(../../img/bg-back-mobile@1x.jpg);
+    background-image: url(../../img/bg-back-tablet@1x.jpg);
   }
 }
 
 .intro__image {
   margin: 90px auto;
-
-  @media @mobile_width {
-    width: 285px;
-  }
+  width: 285px;
 
   @media @tablet_width {
     width: 470px;

@@ -112,26 +112,25 @@
 
 .main-menu__link {
   text-decoration: none;
+  display: block;
+  margin: 0;
+  padding: 8px 0;
 
-  @media @mobile_width {
-    display: block;
-    margin: 0;
-    padding: 8px 0;
+  .var_font(18px; 40px; 700; @white);
 
-    .var_font(18px; 40px; 700; @white);
-
-    .blue_color();
-    text-align: center;
-    border-bottom: 1px solid @grey_bord;
-  }
+  .blue_color();
+  text-align: center;
+  border-bottom: 1px solid @grey_bord;
 
   @media @tablet_width {
     display: inline;
     padding: 0;
 
-    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
 
     .menu_color();
+    border: none;
   }
 }
 

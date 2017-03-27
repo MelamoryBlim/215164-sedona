@@ -19,17 +19,277 @@
   }
 }
 
-.form__button {
+
+
+/* Блок "Представьтесь" */
+
+.feedback-form__name {
+  @media @tablet_width {
+    padding-left: 60px;
+  }
+
+  @media @desktop_width {
+    padding-left: 75px;
+  }
+}
+
+.feedback-form__name::before {
+  @media @tablet_width {
+    .pseudo();
+    top: 0;
+    left: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: #DBDBDB;
+  }
+}
+
+.feedback-form__name .form-fieldset__title {
+  @media @tablet_width {
+    text-align: left;
+  }
+}
+
+.form-fieldset__wrapper-name {
+  display: flex;
+  margin-bottom: 25px;
+
+  align-items: center;
+}
+
+.form-fieldset__wrapper-name:last-of-type {
+  margin: 0;
+}
+
+.form-fieldset__wrapper-name .form-fieldset__input {
+  flex-grow: 1;
+  margin-left: 15px;
+  min-width: 180px;
+}
+
+/* Блок "Ваше общее впечатление" */
+
+.feedback-form__impressions {
+  @media @tablet_width {
+    order: -1;
+  }
+}
+
+.form-fieldset__label-bold--radio {
+  padding-left: 80px;
+  margin-bottom: 26px;
+}
+
+.form-fieldset__label-bold--radio:last-of-type {
+  margin: 0;
+}
+
+.form-fieldset__label-bold--radio::before {
+  .pseudo();
+  position: absolute;
+  top: 0;
+  left: 5px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: @black;
+
+  border-radius: 50%;
+  border: 20px solid @grey;
+}
+
+/* Блок "Контактная информация" */
+
+.feedback-form__contacts {
+  @media @desktop_width {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form-fieldset__wrapper-contacts {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+
+  @media @desktop_width {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.form-fieldset__wrapper-contacts:last-of-type {
+  margin: 0;
+}
+
+.form-fieldset__wrapper-contacts::after {
+  .pseudo();
+  bottom: 0;
+  right: 0;
+
+  width: 60px;
+  height: 62px;
+
+  background-color: @grey_hvr;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-fieldset__wrapper-contacts--phone::after {
+  background-image: url(../../img/icon-phone.svg);
+}
+
+.form-fieldset__wrapper-contacts--mail::after {
+  background-image: url(../../img/icon-mail.svg);
+}
+
+.form-fieldset__wrapper-contacts .form-fieldset__label {
+  margin-left: 20px;
+  margin-bottom: 10px;
+
+  @media @desktop_width {
+    margin: 0;
+    margin-right: 10px;
+  }
+}
+
+.form-fieldset__wrapper-contacts .form-fieldset__input {
+  @media @desktop_width {
+    width: 315px;
+  }
+}
+
+/* Блок "Посещенные достопримечательности" */
+
+.feedback-form__attractions {
+  @media @tablet_width {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10%;
+  }
+
+  @media @desktop_width {
+    padding: 0;
+  }
+}
+
+.form-fieldset__label-bold--check {
+  padding-left: 85px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+
+  @media @tablet_width {
+    width: 50%;
+  }
+
+  @media @desktop_width {
+    width: 25%;
+    margin: 0;
+  }
+}
+
+.form-fieldset__label-bold--check:last-of-type {
+  margin: 0;
+}
+
+.form-fieldset__label-bold--check:nth-of-type(n+3) {
+  @media @tablet_width {
+    margin: 0;
+  }
+}
+
+.form-fieldset__label-bold--check:nth-of-type(2) {
+  order: 1;
+
+  @media @tablet_width {
+    order: 2;
+  }
+}
+
+.form-fieldset__label-bold--check:nth-of-type(3) {
+  order: 2;
+
+  @media @tablet_width {
+    order: 1;
+  }
+}
+
+.form-fieldset__label-bold--check:nth-of-type(4) {
+  order: 3;
+}
+
+.form-fieldset__label-bold--check::before {
+  .pseudo();
+  top: 3px;
+  left: 5px;
+
+  width: 55px;
+  height: 55px;
+
+  background-color: @grey;
+  border-radius: 5px;
+  background-image: url(../../img/icon-tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback-form__contacts::before,
+.feedback-form__contacts::after,
+.feedback-form__attractions::before,
+.feedback-form__attractions::after,
+.feedback-form__text::before,
+.feedback-form__text::after {
+  @media @tablet_width {
+    .pseudo();
+    top: 12px;
+    left: 0;
+
+    width: 25%;
+    height: 1px;
+
+    background-color: #DBDBDB;
+  }
+}
+
+.feedback-form__attractions::before,
+.feedback-form__attractions::after {
+  top: 20px;
+}
+
+.feedback-form__contacts::after,
+.feedback-form__attractions::after,
+.feedback-form__text::after {
+  left: 75%;
+}
+
+.feedback-form__name,
+.feedback-form__impressions {
+  @media @tablet_width {
+    width: 50%;
+  }
+}
+
+.feedback-form__button {
   .const_font();
   .var_font(21px; 26px; 700; @white);
+  
+  cursor: pointer;
 }
 
 .feedback-form__note {
-  @media @mobile_width {
-    display: none;
-  }
+  display: none;
 
-  margin-left: auto;
+  @media @tablet_width {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 

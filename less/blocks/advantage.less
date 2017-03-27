@@ -20,28 +20,38 @@
   color: @white;
 }
 
-.advantage--triangle {
-  @media @mobile_width {
-    padding-top: 90px;
+// Здесь надо сделать псевдоэлемент
 
-    background-image: url(../../img/bg-triangle.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
+/*
+
+.advantage--triangle {
+  padding-top: 90;
+
+  background-image: url(../../img/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+  @media @tablet_width {
+
   }
 }
 
+*/
+
 .advantage--border::after {
-  @media @mobile_width {
-    .pseudo();
-    left: 50%;
-    bottom: 0;
+  .pseudo();
+  left: 50%;
+  bottom: 0;
 
-    transform: translate(-50%, 0);
-    width: 90%;
-    height: 1px;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 1px;
 
-    background-color: @grey_down;
+  background-color: @grey_down;
+
+  @media @tablet_width {
+    display: none;
   }
 }
 
