@@ -20,24 +20,24 @@
   color: @white;
 }
 
-// Здесь надо сделать псевдоэлемент
-
-/*
-
 .advantage--triangle {
-  padding-top: 90;
-
-  background-image: url(../../img/bg-triangle.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
+  padding-top: 0;
 
   @media @tablet_width {
-
+    padding-top: 40px;
   }
 }
 
-*/
+.advantage--triangle::before {
+  content: url(../../img/bg-triangle.svg);
+  display: block;
+  margin-bottom: 40px;
+  width: 100%;
+
+  @media @tablet_width {
+    display: none;
+  }
+}
 
 .advantage--border::after {
   .pseudo();
