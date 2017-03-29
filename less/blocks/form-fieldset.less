@@ -3,7 +3,7 @@
 
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 25px 20px;
   box-sizing: border-box;
   width: 100%;
 
@@ -46,7 +46,6 @@
 
 .form-fieldset__label-bold {
   position: relative;
-  padding: 17px 0;
 
   .var_font(form; 18px; 26px; 700; @black);
 }
@@ -143,28 +142,58 @@
   }
 }
 
-.form-fieldset__label-bold--radio {
-  padding-left: 80px;
+.form-fieldset__wrapper-impressions {
+  padding: 17px 0;
   margin-bottom: 26px;
 }
 
-.form-fieldset__label-bold--radio:last-of-type {
+.form-fieldset__wrapper-impressions:last-of-type {
   margin: 0;
+}
+
+.form-fieldset__label-bold--radio {
+  padding-left: 80px;
+
+  vertical-align: top;
 }
 
 .form-fieldset__label-bold--radio::before {
   .pseudo();
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 5px;
 
   width: 20px;
   height: 20px;
 
-  background-color: @black;
-
+  cursor: pointer;
+  background-color: @grey;
   border-radius: 50%;
   border: 20px solid @grey;
+}
+
+.form-fieldset__label-bold--radio:hover::before {
+  background-color: @grey_hvr;
+  border-color: @grey_hvr;
+}
+
+.form-fieldset__label-bold--radio:active::before {
+  background-color: @grey_down;
+  border-color: @grey_down;
+}
+
+.form-fieldset__radio:checked ~ .form-fieldset__label-bold--radio::before {
+  background-color: @black;
+}
+
+.form-fieldset__radio:checked ~ .form-fieldset__label-bold--radio:hover::before {
+  background-color: @black;
+  border-color: @grey_hvr;
+}
+
+.form-fieldset__radio:checked ~ .form-fieldset__label-bold--radio:active::before {
+  background-color: @black_opacity;
+  border-color: @grey_down;
 }
 
 /* Блок "Контактная информация" */
@@ -246,8 +275,8 @@
   }
 }
 
-.form-fieldset__label-bold--check {
-  padding-left: 85px;
+.form-fieldset__wrapper-attractions {
+  padding: 17px 0;
   margin-bottom: 30px;
   box-sizing: border-box;
 
@@ -261,17 +290,17 @@
   }
 }
 
-.form-fieldset__label-bold--check:last-of-type {
+.form-fieldset__wrapper-attractions:last-of-type {
   margin: 0;
 }
 
-.form-fieldset__label-bold--check:nth-of-type(n+3) {
+.form-fieldset__wrapper-attractions:nth-of-type(n+3) {
   @media @tablet_width {
     margin: 0;
   }
 }
 
-.form-fieldset__label-bold--check:nth-of-type(2) {
+.form-fieldset__wrapper-attractions:nth-of-type(3) {
   order: 1;
 
   @media @tablet_width {
@@ -279,7 +308,7 @@
   }
 }
 
-.form-fieldset__label-bold--check:nth-of-type(3) {
+.form-fieldset__wrapper-attractions:nth-of-type(4) {
   order: 2;
 
   @media @tablet_width {
@@ -287,23 +316,43 @@
   }
 }
 
-.form-fieldset__label-bold--check:nth-of-type(4) {
+.form-fieldset__wrapper-attractions:nth-of-type(5) {
   order: 3;
+}
+
+.form-fieldset__label-bold--check {
+  padding-left: 85px;
 }
 
 .form-fieldset__label-bold--check::before {
   .pseudo();
-  top: 3px;
+  top: -15px;
   left: 5px;
 
   width: 55px;
   height: 55px;
 
-  background-color: @grey;
+  cursor: pointer;
+  background: @grey;
   border-radius: 5px;
+}
+
+.form-fieldset__label-bold--check:hover::before {
+  background: @grey_hvr;
+}
+
+.form-fieldset__label-bold--check:active::before {
+  background: @grey_down;
+}
+
+.form-fieldset__checkbox:checked ~ .form-fieldset__label-bold--check::before {
   background-image: url(../../img/icon-tick.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.form-fieldset__checkbox:checked ~ .form-fieldset__label-bold--check:active::before {
+  background-image: url(../../img/icon-tick-down.svg);
 }
 
 /* Сообщение об ошибке */
