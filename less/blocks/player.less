@@ -42,10 +42,6 @@
   }
 }
 
-.player__video img {
-  display: block;
-}
-
 .player__controls {
   position: absolute;
   left: 50%;
@@ -99,6 +95,7 @@
   width: 10px;
   height: 10px;
 
+  cursor: pointer;
   background-color: @white;
   border-radius: 50%;
 }
@@ -127,12 +124,28 @@
 
   background-image: url(../../img/icon-video-replay.svg);
 
+  &:hover {
+    background-image: url(../../img/icon-video-replay-hvr.svg);
+  }
+
+  &:active {
+    background-image: url(../../img/icon-video-replay-down.svg);
+  }
+
   @media @tablet_width {
     order: -1;
     margin-left: 30px;
     margin-right: 10px;
 
     background-image: url(../../img/icon-video-replay-tablet.svg);
+
+    &:hover {
+      background-image: url(../../img/icon-video-replay-tablet.svg);
+    }
+
+    &:active {
+      background-image: url(../../img/icon-video-replay-tablet.svg);
+    }
   }
 }
 
@@ -141,10 +154,26 @@
 
   background-image: url(../../img/icon-video-subtitles.svg);
 
+  &:hover {
+    background-image: url(../../img/icon-video-subtitles-hvr.svg);
+  }
+
+  &:active {
+    background-image: url(../../img/icon-video-subtitles-down.svg);
+  }
+
   @media @tablet_width {
     margin-left: 20px;
 
     background-image: url(../../img/icon-video-subtitles-tablet.svg);
+
+    &:hover {
+      background-image: url(../../img/icon-video-subtitles-tablet.svg);
+    }
+
+    &:active {
+      background-image: url(../../img/icon-video-subtitles-tablet.svg);
+    }
   }
 }
 
@@ -154,10 +183,26 @@
 
   background-image: url(../../img/icon-video-fullscreen.svg);
 
+  &:hover {
+    background-image: url(../../img/icon-video-fullscreen-hvr.svg);
+  }
+
+  &:active {
+    background-image: url(../../img/icon-video-fullscreen-down.svg);
+  }
+
   @media @tablet_width {
     margin-right: 30px;
 
     background-image: url(../../img/icon-video-fullscreen-tablet.svg);
+
+    &:hover {
+      background-image: url(../../img/icon-video-fullscreen-tablet.svg);
+    }
+
+    &:active {
+      background-image: url(../../img/icon-video-fullscreen-tablet.svg);
+    }
   }
 }
 
