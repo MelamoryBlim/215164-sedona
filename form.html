@@ -62,7 +62,7 @@
             </p>
           </header>
 
-          <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="feedback-form" action="#" method="get">
 
             <div class="form-fieldset  feedback-form__name">
               <div class="form-fieldset__title">Представьтесь:</div>
@@ -85,7 +85,7 @@
               <div class="form-fieldset__wrapper-contacts  form-fieldset__wrapper-contacts--phone">
                 <label class="form-fieldset__label" for="phone number">Телефон*:</label>
                 <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
-                <div class="form-fieldset__error">
+                <div class="form-fieldset__error  form-fieldset__error--show">
                   Ошибка, перепроверьте номер
                 </div>
               </div>
@@ -202,22 +202,8 @@
       </section>
 
     </div>
-    <script src="js/main-menu.js" async>
-      var menuMain = document.querySelector('.main-menu');
-      var menuToggle = document.querySelector('.main-menu__toggle');
-
-      menuMain.classList.remove('main-menu--nojs');
-
-      menuToggle.addEventListener('click', function() {
-        if (menuMain.classList.contains('main-menu--closed')) {
-          menuMain.classList.remove('main-menu--closed');
-          menuMain.classList.add('main-menu--opened');
-        } else {
-            menuMain.classList.add('main-menu--closed');
-            menuMain.classList.remove('main-menu--opened');
-          }
-      });
-    </script>
+    <script src="js/main-menu.min.js"></script>
+    <script src="js/popup-form.min.js"></script>
   </body>
 </html>
 
