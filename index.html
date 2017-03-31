@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet"/>
+    
+    
+    
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        background-image: url("img/sedona-index-mobile.jpg");
+      }
+      @media ( min-width: 768px ) {
+        HTML {
+          background-image: url("img/sedona-index-tablet.jpg");
+        }
+      }
+      @media ( min-width: 1200px ) {
+        HTML {
+          background-image: url("img/sedona-index-desktop.jpg");
+        }
+      }
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    
+    
+    
   </head>
   <body class="page">
     <div class="page__wrapper">
