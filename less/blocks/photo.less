@@ -3,8 +3,8 @@
 
   padding: 0 20px;
   padding-top: 22px;
-  box-sizing: border-box;
   width: 100%;
+  box-sizing: border-box;
 
   border-top: 1px solid @light_grey;
 
@@ -24,6 +24,10 @@
   @media @tablet_width {
     width: 100%;
   }
+}
+
+.photo--first .photo__description {
+  padding-right: 22px;
 }
 
 .photo--last {
@@ -53,7 +57,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
+    padding: 20px 32px 22px 18px;
 
     background-color: @grey;
   }
@@ -66,13 +70,14 @@
     width: 100%;
 
     color: @white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: @black_opacity;
   }
 }
 
 .photo__title {
   display: block;
   margin-bottom: 10px;
+
   font-size: 13px;
   font-weight: 700;
 
@@ -85,8 +90,9 @@
 }
 
 .photo__author {
-  text-transform: none;
   margin-bottom: 18px;
+
+  text-transform: none;
 
   @media @tablet_width {
     margin-bottom: 0;
@@ -103,8 +109,8 @@
 
 .photo__stats::before {
   .pseudo();
-  bottom: -2px;
-  left: -2px;
+  bottom: -4px;
+  left: 2px;
 
   width: 25px;
   height: 25px;
