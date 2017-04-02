@@ -1,18 +1,25 @@
 .detail {
   position: relative;
 
-  padding-top: 40px;
+  padding: 0;
   padding-left: 70px;
   padding-right: 25px;
   box-sizing: border-box;
 
   @media @tablet_width {
-    padding: 0 35px;
-    padding-top: 163px;
-    padding-bottom: 63px;
+    padding: 0;
     width: 33.33%;
 
     text-align: center;
+  }
+}
+
+.detail--hotel {
+  padding-top: 40px;
+
+  @media @tablet_width {
+    padding-top: 163px;
+    padding-bottom: 63px;
   }
 
   @media @desktop_width {
@@ -21,23 +28,35 @@
 }
 
 .detail--gift {
+  padding-top: 34px;
+
   @media @tablet_width {
     order: 1;
+    padding-top: 163px;
+    padding-bottom: 63px;
+  }
+
+  @media @desktop_width {
+    padding-bottom: 83px;
   }
 }
 
 .detail--food {
-  padding-bottom: 40px;
+  padding-top: 34px;
+  padding-bottom: 38px;
 
   @media @tablet_width {
-    padding-bottom: 0;
+    padding-top: 163px;
+    padding-bottom: 63px;
+  }
+
+  @media @desktop_width {
+    padding-bottom: 83px;
   }
 }
 
 .detail::before {
   .pseudo();
-  top: 25px;
-  left: 18px;
 
   width: 40px;
   height: 40px;
@@ -47,43 +66,76 @@
   background-size: contain;
 
   @media @tablet_width {
-    top: 55px;
-    left: 50%;
-
-    margin-left: -40px;
     width: 80px;
     height: 80px;
   }
 }
 
 .detail--hotel::before {
+  top: 24px;
+  left: 20px;
+
   background-image: url(../img/icon-house.svg);
+
+  @media @tablet_width {
+    top: 56px;
+    left: 50%;
+
+    margin-left: -40px;
+  }
 }
 
 .detail--gift::before {
+  top: 16px;
+  left: 21px;
+
   background-image: url(../img/icon-gift.svg);
+
+  @media @tablet_width {
+    top: 54px;
+    left: 50%;
+
+    margin-left: -40px;
+  }
 }
 
 .detail--food::before {
+  top: 21px;
+  left: 18px;
+
   background-image: url(../img/icon-burger.svg);
+
+  @media @tablet_width {
+    top: 56px;
+    left: 50%;
+
+    margin-left: -40px;
+  }
 }
 
 .detail__title {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 
-  .var_font(16px; 16px; 700; @black);
+  .var_font(18px; 16px; 700; @black);
 
   @media @tablet_width {
     margin-bottom: 28px;
 
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 .detail__text {
   margin: 0;
 
-  line-height: 20px;
+  line-height: 21px;
+
+  @media @tablet_width {
+    margin: 0 45px;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
