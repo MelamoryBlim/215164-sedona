@@ -6,7 +6,7 @@
   display: none;
   margin-top: -150px;
   margin-left: -160px;
-  padding-top: 45px;
+  padding-top: 40px;
   width: 320px;
 
   background-color: @white;
@@ -14,7 +14,7 @@
   text-align: center;
 
   @media @tablet_width {
-    padding-top: 65px;
+    padding-top: 60px;
     margin-top: -175px;
     margin-left: -200px;
     width: 400px;
@@ -25,13 +25,44 @@
   display: block;
 }
 
+.failure-popup__header {
+  .section_header();
+}
+
+.failure-popup__header-title {
+  margin: 0;
+  margin-bottom: 26px;
+
+  .var_font(18px; 26px; 700; @black);
+
+  @media @tablet_width {
+    margin: 0 90px;
+    margin-bottom: 30px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.failure-popup__header-text {
+  margin: 0 45px;
+  line-height: 26px;
+}
+
 .failure-popup__button {
-  margin-top: 30px;
-  margin-bottom: 35px;
+  margin-top: 26px;
+  margin-bottom: 36px;
+  width: 180px;
+
+  font-size: 18px;
+  text-transform: uppercase;
 
   @media @tablet_width {
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+    width: 270px;
+
+    font-size: 21px;
   }
 }
 
