@@ -1,5 +1,5 @@
 .const_font() {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -75,13 +75,16 @@
 
 .menu_color() {
   color: @black;
+  background: none;
 
   &:hover {
     color: @blue_hvr;
+    background: none;
   }
 
   &:active {
     color: @grey_down;
+    background: none;
   }
 }
 
@@ -98,16 +101,22 @@
 }
 
 .wrapper() {
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
 
   @media @tablet_width {
-    width: auto;
+    width: 768px;
   }
 
   @media @desktop_width {
-    max-width: 1200px;
+    width: 1200px;
   }
+}
+
+.section_header() {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .pseudo() {
@@ -115,5 +124,6 @@
   content: "";
   display: table;
 }
+
 
 

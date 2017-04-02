@@ -3,7 +3,8 @@
 
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 0 20px;
+  padding-top: 16px;
   box-sizing: border-box;
   width: 100%;
 
@@ -12,66 +13,27 @@
 
   @media @tablet_width {
     padding: 0;
-    margin-bottom: 60px;
 
     border: none;
   }
 }
 
-.form-fieldset--name,
-.form-fieldset--impressions {
-  @media @tablet_width {
-    width: 50%;
-  }
-}
-
-.form-fieldset--contacts::before,
-.form-fieldset--contacts::after,
-.form-fieldset--attractions::before,
-.form-fieldset--attractions::after,
-.form-fieldset--text::before,
-.form-fieldset--text::after {
-  @media @tablet_width {
-    .pseudo();
-    top: 12px;
-    left: 0;
-
-    width: 25%;
-    height: 1px;
-
-    background-color: #DBDBDB;
-  }
-}
-
-.form-fieldset--attractions::before,
-.form-fieldset--attractions::after {
-  top: 20px;
-}
-
-.form-fieldset--contacts::after,
-.form-fieldset--attractions::after,
-.form-fieldset--text::after {
-  left: 75%;
-}
-
 .form-fieldset__title {
-  margin-bottom: 25px;
   width: 100%;
 
-  .var_font(21px; 26px; 700; @black);
+  .var_font(18px; 26px; 700; @black);
 
   text-align: center;
 
-  margin-bottom: 45px;
-}
+  @media @tablet_width {
 
-.form-fieldset__wrapper {
-  display: flex;
+    font-size: 21px;
+  }
 }
 
 .form-fieldset__input,
 .form-fieldset__text {
-  padding: 15px 0;
+  padding: 13px 0;
   padding-left: 20px;
   box-sizing: border-box;
 
@@ -84,58 +46,103 @@
   display: none;
 }
 
-.form-fieldset__label {
+.form-fieldset__label-bold {
   position: relative;
-}
-
-.form-fieldset__label--bold {
-  padding: 17px 0;
 
   .var_font(form; 18px; 26px; 700; @black);
 }
 
-/* Блок "Представьтесь" */
-
-.form-fieldset--name {
-  @media @tablet_width {
-    padding-left: 60px;
-  }
-
-  @media @desktop_width {
-    padding-left: 75px;
-  }
-}
-
-.form-fieldset--name::before {
+.feedback-form__contacts::before,
+.feedback-form__contacts::after,
+.feedback-form__attractions::before,
+.feedback-form__attractions::after,
+.feedback-form__text::before,
+.feedback-form__text::after {
   @media @tablet_width {
     .pseudo();
-    top: 0;
+    top: 12px;
     left: 0;
 
-    width: 1px;
-    height: 100%;
+    width: 25%;
+    height: 1px;
 
     background-color: #DBDBDB;
   }
 }
 
-.form-fieldset--name .form-fieldset__title {
+.feedback-form__attractions::before,
+.feedback-form__attractions::after {
+  top: 20px;
+}
+
+.feedback-form__contacts::after,
+.feedback-form__attractions::after,
+.feedback-form__text::after {
+  left: 75%;
+}
+
+.feedback-form__name,
+.feedback-form__impressions {
   @media @tablet_width {
+    width: 50%;
+  }
+}
+
+/* Блок "Представьтесь" */
+
+.feedback-form__name {
+  @media @tablet_width {
+    padding-left: 58px;
+  }
+
+  @media @desktop_width {
+    padding-left: 80px;
+  }
+}
+
+.feedback-form__name::before {
+  @media @tablet_width {
+    .pseudo();
+    top: 5px;
+    left: 0;
+
+    width: 1px;
+    height: 295px;
+
+    background-color: #DBDBDB;
+  }
+}
+
+.feedback-form__name .form-fieldset__title {
+  margin-bottom: 24px;
+
+  @media @tablet_width {
+    margin-bottom: 58px;
+
     text-align: left;
   }
 }
 
-.form-fieldset__wrapper--name {
-  margin-bottom: 25px;
+.form-fieldset__wrapper-name {
+  display: flex;
+  margin-bottom: 20px;
 
   align-items: center;
 }
 
-.form-fieldset__wrapper--name:last-of-type {
-  margin: 0;
+.form-fieldset__wrapper-name:last-of-type {
+  margin-bottom: 24px;
+
+  @media @tablet_width {
+    margin-bottom: 69px;
+  }
+
+  @media @desktop_width {
+    margin-bottom: 67px;
+  }
 }
 
-.form-fieldset__wrapper--name .form-fieldset__input {
+.form-fieldset__wrapper-name .form-fieldset__input {
   flex-grow: 1;
   margin-left: 15px;
   min-width: 180px;
@@ -143,87 +150,171 @@
 
 /* Блок "Ваше общее впечатление" */
 
-.form-fieldset--impressions {
+.feedback-form__impressions {
   @media @tablet_width {
     order: -1;
   }
 }
 
-.form-fieldset__label--radio {
+.feedback-form__impressions .form-fieldset__title {
+  margin-bottom: 21px;
+
+  @media @tablet_width {
+    margin-bottom: 56px;
+
+    text-align: left;
+  }
+
+  @media @desktop_width {
+    margin-left: 78px;
+  }
+}
+
+.form-fieldset__wrapper-impressions {
+  padding: 17px 0;
+  margin-bottom: 9px;
+
+  @media @tablet_width {
+    margin-bottom: 18px;
+  }
+}
+
+.form-fieldset__wrapper-impressions:last-of-type {
+  margin-bottom: 27px;
+}
+
+.form-fieldset__label-bold--radio {
   padding-left: 80px;
-  margin-bottom: 26px;
+
+  vertical-align: top;
 }
 
-.form-fieldset__label--radio:last-of-type {
-  margin: 0;
-}
-
-.form-fieldset__label--radio::before {
+.form-fieldset__label-bold--radio::before {
   .pseudo();
   position: absolute;
-  top: 0;
-  left: 5px;
+  top: -15px;
+  left: -2px;
 
   width: 20px;
   height: 20px;
 
-  background-color: @black;
-
+  cursor: pointer;
+  background-color: @grey;
   border-radius: 50%;
-  border: 20px solid @grey;
+  border: 19px solid @grey;
+
+  @media @tablet_width {
+    left: 2px;
+  }
+}
+
+.form-fieldset__label-bold--radio:hover::before {
+  background-color: @grey_hvr;
+  border-color: @grey_hvr;
+}
+
+.form-fieldset__label-bold--radio:active::before {
+  background-color: @grey_down;
+  border-color: @grey_down;
+}
+
+.form-fieldset__radio:checked ~ .form-fieldset__label-bold--radio::before {
+  background-color: @black;
+}
+
+.form-fieldset__radio:checked ~ .form-fieldset__label-bold--radio:hover::before {
+  background-color: @black;
+  border-color: @grey_hvr;
+}
+
+.form-fieldset__radio:checked ~ .form-fieldset__label-bold--radio:active::before {
+  background-color: @black_opacity;
+  border-color: @grey_down;
 }
 
 /* Блок "Контактная информация" */
 
-.form-fieldset--contacts {
+.feedback-form__contacts {
   @media @desktop_width {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 26px;
   }
 }
 
-.form-fieldset__wrapper--contacts {
+.feedback-form__contacts .form-fieldset__title {
+  margin-bottom: 28px;
+
+  @media @tablet_width {
+    margin-bottom: 32px;
+  }
+
+  @media @desktop_width {
+    margin-bottom: 49px;
+  }
+}
+
+.form-fieldset__wrapper-contacts {
   position: relative;
 
+  display: flex;
   flex-direction: column;
   margin-bottom: 25px;
+  box-sizing: border-box;
+
+  @media @tablet_width {
+    margin-bottom: 29px;
+  }
 
   @media @desktop_width {
     flex-direction: row;
     align-items: center;
     margin: 0;
+    padding: 26px 0;
   }
 }
 
-.form-fieldset__wrapper--contacts:last-of-type {
-  margin: 0;
+.form-fieldset__wrapper-contacts:last-of-type {
+  margin-bottom: 29px;
+
+  @media @tablet_width {
+    margin-bottom: 53px;
+  }
+
+  @media @desktop_width {
+    margin: 0;
+  }
 }
 
-.form-fieldset__wrapper--contacts::after {
+.form-fieldset__wrapper-contacts::after {
   .pseudo();
-  bottom: 0;
+  top: 26px;
   right: 0;
 
-  width: 60px;
-  height: 62px;
+  width: 58px;
+  height: 57px;
 
   background-color: @grey_hvr;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.form-fieldset__wrapper--phone::after {
-  background-image: url(../../img/icon-phone.svg);
+.form-fieldset__wrapper-contacts--phone::after {
+  background-image: url(../img/icon-phone.svg);
 }
 
-.form-fieldset__wrapper--mail::after {
-  background-image: url(../../img/icon-mail.svg);
+.form-fieldset__wrapper-contacts--mail::after {
+  background-image: url(../img/icon-mail.svg);
 }
 
-.form-fieldset__wrapper--contacts .form-fieldset__label {
+.form-fieldset__wrapper-contacts .form-fieldset__label {
   margin-left: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+
+  @media @tablet_width {
+    margin-left: 24px;
+  }
 
   @media @desktop_width {
     margin: 0;
@@ -231,19 +322,23 @@
   }
 }
 
-.form-fieldset__wrapper--contacts .form-fieldset__input {
+.form-fieldset__wrapper-contacts .form-fieldset__input {
   @media @desktop_width {
+    margin-left: 6px;
     width: 315px;
   }
 }
 
 /* Блок "Посещенные достопримечательности" */
 
-.form-fieldset--attractions {
+.feedback-form__attractions {
   @media @tablet_width {
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 10%;
+    padding: 0;
+    padding-left: 100px;
+    padding-right: 95px;
   }
 
   @media @desktop_width {
@@ -251,34 +346,41 @@
   }
 }
 
-.form-fieldset__label--check {
-  padding-left: 85px;
-  margin-bottom: 30px;
+.feedback-form__attractions .form-fieldset__title {
+  margin-bottom: 14px;
+
+  @media @tablet_width {
+    margin-bottom: 39px;
+  }
+}
+
+.form-fieldset__wrapper-attractions {
+  padding: 17px 0;
+  margin-bottom: 20px;
   box-sizing: border-box;
 
   @media @tablet_width {
-    width: 50%;
+    margin-bottom: 28px;
   }
 
   @media @desktop_width {
-    width: 25%;
     margin: 0;
   }
 }
 
-.form-fieldset__label--check:last-of-type {
-  @media @mobile_width {
-    margin: 0;
-  }
-}
+.form-fieldset__wrapper-attractions:last-of-type {
+  margin-bottom: 26px;
 
-.form-fieldset__label--check:nth-of-type(n+3) {
   @media @tablet_width {
-    margin: 0;
+    margin-bottom: 67px;
+  }
+
+  @media @desktop_width {
+    margin-bottom: 65px;
   }
 }
 
-.form-fieldset__label--check:nth-of-type(2) {
+.form-fieldset__wrapper-attractions:nth-of-type(3) {
   order: 1;
 
   @media @tablet_width {
@@ -286,58 +388,109 @@
   }
 }
 
-.form-fieldset__label--check:nth-of-type(3) {
+.form-fieldset__wrapper-attractions:nth-of-type(4) {
   order: 2;
 
   @media @tablet_width {
     order: 1;
+    padding-right: 13px;
+  }
+
+  @media @desktop_width {
+    padding-right: 0;
   }
 }
 
-.form-fieldset__label--check:nth-of-type(4) {
+.form-fieldset__wrapper-attractions:nth-of-type(5) {
   order: 3;
 }
 
-.form-fieldset__label--check::before {
+.form-fieldset__label-bold--check {
+  padding-left: 78px;
+}
+
+.form-fieldset__label-bold--check::before {
   .pseudo();
-  top: 3px;
-  left: 5px;
+  top: -14px;
+  left: 0px;
 
   width: 55px;
   height: 55px;
 
-  background-color: @grey;
+  cursor: pointer;
+  background: @grey;
   border-radius: 5px;
-  background-image: url(../../img/icon-tick.svg);
+}
+
+.form-fieldset__label-bold--check:hover::before {
+  background: @grey_hvr;
+}
+
+.form-fieldset__label-bold--check:active::before {
+  background: @grey_down;
+}
+
+.form-fieldset__checkbox:checked ~ .form-fieldset__label-bold--check::before {
+  background-image: url(../img/icon-tick.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.form-fieldset__checkbox:checked ~ .form-fieldset__label-bold--check:active::before {
+  background-image: url(../img/icon-tick-down.svg);
+}
+
+/* Блок "Опишите свои эмоции" */
+
+.feedback-form__text .form-fieldset__title {
+  margin-bottom: 20px;
+
+  @media @tablet_width {
+    margin-bottom: 58px;
+  }
+}
+
+.form-fieldset__text {
+  margin-bottom: 58px;
+
+  @media @tablet_width {
+    margin-bottom: 66px;
+  }
 }
 
 /* Сообщение об ошибке */
 
 .form-fieldset__error {
-  position: absolute;
+  display: block;
+  margin-left: 21px;
+  margin-top: 10px;
 
-  display: none;
-
-  .var_font(error; 12px; 12px; 400; @red_text);
-
-  @media @mobile_width {
-    bottom: -20px;
-    left: 20px;
-  }
+  .var_font(error; 14px; 14px; 400; @red_text);
 
   @media @tablet_width {
-    top: 5px;
-    right: 0;
+    position: absolute;
+    top: -10px;
+    right: 2px;
+    bottom: 70px;
+    left: 425px;
+
+    text-align: right;
   }
 
   @media @desktop_width {
-    top: -20px;
-    left: 50%;
+    top: -11px;
+    left: -16px;
 
-    transform: translate(-50%, 0);
+    text-align: center;
   }
+}
+
+.form-fieldset__input[type="tel"]:invalid ~ .form-fieldset__error {
+  display: block;
+}
+
+.form-fieldset__input[type="tel"]:valid ~ .form-fieldset__error {
+  display: block;
 }
 
 .form-fieldset__error--show {

@@ -1,27 +1,55 @@
 .videoplayer {
-  padding-top: 30px;
-  margin-bottom: 100px;
+  padding-top: 32px;
+  margin-bottom: 130px;
 
   @media @tablet_width {
-    padding-top: 50px;
-    margin-bottom: 60px;
+    padding-top: 66px;
+    margin-bottom: 64px;
   }
 
   @media @desktop_width {
-    padding-top: 70px;
-    margin-bottom: 80px;
+    padding-top: 72px;
+    margin-bottom: 110px;
   }
 }
 
 .videoplayer__header {
-  margin-bottom: 35px;
+  .section_header();
+  margin-bottom: 36px;
 
   @media @tablet_width {
-    margin-bottom: 55px;
+    margin-bottom: 72px;
+  }
+}
+
+.videoplayer__header-title {
+  margin: 0;
+  margin-bottom: 26px;
+
+  .var_font(18px; 26px; 700; @black);
+
+  @media @tablet_width {
+    margin-bottom: 32px;
+
+    font-size: 30px;
   }
 
   @media @desktop_width {
-    margin-bottom: 75px;
+    margin-bottom: 28px;
+  }
+}
+
+.videoplayer__header-text {
+  margin: 0 25px;
+
+  line-height: 24px;
+
+  @media @tablet_width {
+    margin: 0 160px;
+  }
+
+  @media @desktop_width {
+    margin: 0 370px;
   }
 }
 

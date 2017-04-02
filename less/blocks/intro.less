@@ -1,32 +1,68 @@
 .intro {
   overflow: hidden;
 
+  background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
   background-color: @blue;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: bottom, center;
+  background-size: 768px, cover;
 
-  @media @mobile_width {
-    background-image: url(../../img/bg-intro-triangle-mobile.svg), url(../../img/bg-back-mobile@1x.jpg);
-  }
+  @media @retina {
+    background-image: url(../img/bg-intro-triangle-mobile.svg), url(../img/bg-back-mobile@2x.jpg);
+    }
 
   @media @tablet_width {
-    background-image: url(../../img/bg-back-mobile@1x.jpg);
+    background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@1x.jpg);
+    background-size: 768px, cover;
+
+    @media @retina {
+      background-image: url(../img/bg-intro-triangle-tablet.svg), url(../img/bg-back-tablet@2x.jpg);
+    }
+  }
+
+  @media @desktop_width {
+    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
+    background-size: 1200px, cover;
+
+    @media @retina {
+      background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@2x.jpg);
+    }
   }
 }
 
 .intro__image {
-  margin: 90px auto;
-
-  @media @mobile_width {
-    width: 285px;
-  }
+  margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 84px;
+  width: 282px;
 
   @media @tablet_width {
-    width: 470px;
+    margin-top: 76px;
+    margin-bottom: 90px;
+    width: 460px;
+  }
+
+  @media @desktop_width {
+    margin-top: 78px;
+    margin-bottom: 88px;
   }
 }
 
 .intro__image--min {
-  margin: 50px auto;
+  margin: 0 auto;
+  margin-top: 52px;
+  margin-bottom: 66px;
+  width: 232px;
+
+  @media @tablet_width {
+    margin-top: 96px;
+    margin-bottom: 112px;
+    width: 460px;
+  }
+
+  @media @desktop_width {
+    margin-top: 100px;
+    margin-bottom: 119px;
+  }
 }
+

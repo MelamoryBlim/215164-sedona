@@ -1,10 +1,10 @@
 .photo {
   position: relative;
 
-  padding: 0 25px;
-  padding-top: 25px;
-  box-sizing: border-box;
+  padding: 0 20px;
+  padding-top: 22px;
   width: 100%;
+  box-sizing: border-box;
 
   border-top: 1px solid @light_grey;
 
@@ -26,14 +26,21 @@
   }
 }
 
+.photo--first .photo__description {
+  padding-right: 20px;
+}
+
 .photo--last {
-  @media @mobile_width {
-    border-bottom: 1px solid @light_grey;
+  border-bottom: 1px solid @light_grey;
+
+  @media @tablet_width {
+    border: 0;
   }
 }
 
 .photo__image img {
   display: block;
+  margin: 0 auto;
 }
 
 .photo__description {
@@ -42,17 +49,15 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 10px 0;
+  padding-top: 20px;
+  padding-bottom: 22px;
   box-sizing: border-box;
-
-  color: @black;
-  text-decoration: none;
 
   @media @tablet_width {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
+    padding: 20px 29px 22px 21px;
 
     background-color: @grey;
   }
@@ -65,43 +70,62 @@
     width: 100%;
 
     color: @white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: @black_opacity;
   }
 }
 
 .photo__title {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 14px;
   font-weight: 700;
+
+  color: @black;
+  text-decoration: none;
+
+  @media @desktop_width {
+    color: @white;
+  }
 }
 
 .photo__author {
+  margin-bottom: 18px;
+
   text-transform: none;
-  @media @mobile_width {
-    margin-bottom: 10px;
+
+  @media @tablet_width {
+    margin-bottom: 0;
   }
 }
 
 .photo__stats {
   position: relative;
 
-  padding-left: 35px;
+  padding-left: 36px;
 
   font-weight: 700;
 }
 
 .photo__stats::before {
   .pseudo();
-  bottom: 3px;
-  left: 0;
+  bottom: -3px;
+  left: -2px;
 
   width: 25px;
   height: 25px;
 
-  background-image: url(../../img/icon-like.svg);
+  background-image: url(../img/icon-like.svg);
   background-repeat: no-repeat;
   background-position: center;
 
+  @media @tablet_width {
+    bottom: -5px;
+  left: 1px;
+  }
+
   @media @desktop_width {
-    background-image: url(../../img/icon-like-desktop.svg);
+    background-image: url(../img/icon-like-desktop.svg);
   }
 }
 

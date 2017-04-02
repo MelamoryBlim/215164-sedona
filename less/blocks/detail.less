@@ -1,83 +1,141 @@
 .detail {
   position: relative;
 
-  padding-top: 40px;
-  padding-left: 75px;
+  padding: 0;
+  padding-left: 70px;
   padding-right: 25px;
   box-sizing: border-box;
 
   @media @tablet_width {
     padding: 0;
-    padding-top: 165px;
-    padding-bottom: 65px;
     width: 33.33%;
 
     text-align: center;
   }
+}
+
+.detail--hotel {
+  padding-top: 40px;
+
+  @media @tablet_width {
+    padding-top: 163px;
+    padding-bottom: 63px;
+  }
 
   @media @desktop_width {
-    padding-bottom: 85px;
+    padding-bottom: 83px;
   }
 }
 
 .detail--gift {
+  padding-top: 34px;
+
   @media @tablet_width {
     order: 1;
+    padding-top: 163px;
+    padding-bottom: 63px;
+  }
+
+  @media @desktop_width {
+    padding-bottom: 83px;
   }
 }
 
 .detail--food {
-  @media @mobile_width {
-    padding-bottom: 40px;
+  padding-top: 34px;
+  padding-bottom: 38px;
+
+  @media @tablet_width {
+    padding-top: 163px;
+    padding-bottom: 63px;
+  }
+
+  @media @desktop_width {
+    padding-bottom: 83px;
   }
 }
 
 .detail::before {
   .pseudo();
-  top: 25px;
-  left: 20px;
 
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 
   @media @tablet_width {
-    top: 60px;
-    left: 50%;
-
-    margin-left: -40px;
     width: 80px;
     height: 80px;
   }
 }
 
 .detail--hotel::before {
-  background-image: url(../../img/icon-house.svg);
+  top: 24px;
+  left: 20px;
+
+  background-image: url(../img/icon-house.svg);
+
+  @media @tablet_width {
+    top: 56px;
+    left: 50%;
+
+    margin-left: -40px;
+  }
 }
 
 .detail--gift::before {
-  background-image: url(../../img/icon-gift.svg);
+  top: 16px;
+  left: 21px;
+
+  background-image: url(../img/icon-gift.svg);
+
+  @media @tablet_width {
+    top: 54px;
+    left: 50%;
+
+    margin-left: -40px;
+  }
 }
 
 .detail--food::before {
-  background-image: url(../../img/icon-burger.svg);
+  top: 21px;
+  left: 18px;
+
+  background-image: url(../img/icon-burger.svg);
+
+  @media @tablet_width {
+    top: 56px;
+    left: 50%;
+
+    margin-left: -40px;
+  }
 }
 
 .detail__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
-  .var_font(21px; 26px; 700; @black);
+  .var_font(18px; 16px; 700; @black);
 
   @media @tablet_width {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+
+    font-size: 20px;
   }
 }
 
 .detail__text {
   margin: 0;
+
+  line-height: 21px;
+
+  @media @tablet_width {
+    margin: 0 45px;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 

@@ -1,35 +1,42 @@
 .feedback-form {
-  padding-top: 25px;
-  margin-bottom: 40px;
-
   text-align: center;
 
   @media @tablet_width {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 50px;
     margin: 0 auto;
-    width: 85%;
-    max-width: 960px;
+    width: 652px;
   }
 
   @media @desktop_width {
-    padding-top: 75px;
+    width: 960px;
   }
 }
 
-.form__button {
+.feedback-form__button {
   .const_font();
   .var_font(21px; 26px; 700; @white);
+
+  cursor: pointer;
+
+  @media @tablet_width {
+    width: 328px;
+  }
+
+  @media @desktop_width {
+    width: 480px;
+  }
 }
 
 .feedback-form__note {
-  @media @mobile_width {
-    display: none;
-  }
+  display: none;
 
-  margin-left: auto;
+  @media @tablet_width {
+    display: block;
+    align-self: center;
+    margin-left: auto;
+  }
 }
 
 

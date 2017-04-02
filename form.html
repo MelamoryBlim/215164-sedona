@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HTML Academy: Седона - Форма отзыва</title>
     <link href="css/style.css" rel="stylesheet"/>
+
+
+
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        background-image: url("img/sedona-form-mobile.jpg");
+      }
+      @media ( min-width: 768px ) {
+        HTML {
+          background-image: url("img/sedona-form-tablet.jpg");
+        }
+      }
+      @media ( min-width: 1200px ) {
+        HTML {
+          background-image: url("img/sedona-form-desktop.jpg");
+        }
+      }
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+
+
+
   </head>
   <body class="page">
     <div class="page__wrapper">
@@ -33,8 +61,8 @@
         </nav>
         <a class="page-header__logo">
           <picture>
-            <source media="(min-width: 1200px)" srcset=""/>
-            <source media="(min-width: 768px)" srcset=""/>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg"/>
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg"/>
             <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона"/>
           </picture>
         </a>
@@ -55,82 +83,102 @@
         <!-- Form -->
 
         <section class="feedback">
-          <header class="section-header  feedback__header">
-            <h1 class="section-header__title">Оставьте свой отзыв</h1>
-            <p class="section-header__text">
-              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          <header class="feedback__header">
+            <h1 class="feedback__header-title">Оставьте свой отзыв</h1>
+            <p class="feedback__header-text">
+              Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях
             </p>
           </header>
 
-          <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="form-fieldset  form-fieldset--name">
+          <form class="feedback-form" action="#" method="get">
+
+            <div class="form-fieldset  feedback-form__name">
               <div class="form-fieldset__title">Представьтесь:</div>
-              <div class="form-fieldset__wrapper  form-fieldset__wrapper--name">
+              <div class="form-fieldset__wrapper-name">
                 <label class="form-fieldset__label" for="first name">Имя*:</label>
                 <input class="form-fieldset__input" type="text" name="first name" id="first name" placeholder="Петр" required/>
               </div>
-              <div class="form-fieldset__wrapper  form-fieldset__wrapper--name">
+              <div class="form-fieldset__wrapper-name">
                 <label class="form-fieldset__label" for="last name">Фамилия*:</label>
                 <input class="form-fieldset__input" type="text" name="last name" id="last name" placeholder="Иванов" required/>
               </div>
-              <div class="form-fieldset__wrapper  form-fieldset__wrapper--name">
+              <div class="form-fieldset__wrapper-name">
                 <label class="form-fieldset__label" for="middle name">Отчество:</label>
                 <input class="form-fieldset__input" type="text" name="middle name" id="middle name" placeholder="Александрович"/>
               </div>
             </div>
-            <div class="form-fieldset  form-fieldset--contacts">
+
+            <div class="form-fieldset  feedback-form__contacts">
               <div class="form-fieldset__title">Контактная информация:</div>
-              <div class="form-fieldset__wrapper  form-fieldset__wrapper--contacts  form-fieldset__wrapper--phone">
+              <div class="form-fieldset__wrapper-contacts  form-fieldset__wrapper-contacts--phone">
                 <label class="form-fieldset__label" for="phone number">Телефон*:</label>
-                <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+                <input class="form-fieldset__input" type="tel" name="phone number" id="phone number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                 <div class="form-fieldset__error">
                   Ошибка, перепроверьте номер
                 </div>
               </div>
-              <div class="form-fieldset__wrapper  form-fieldset__wrapper--contacts  form-fieldset__wrapper--mail">
+              <div class="form-fieldset__wrapper-contacts  form-fieldset__wrapper-contacts--mail">
                 <label class="form-fieldset__label" for="email">Электронная почта*:</label>
                 <input class="form-fieldset__input" type="email" name="email" id="email" placeholder="Введите e-mail" required/>
               </div>
             </div>
-            <div class="form-fieldset  form-fieldset--impressions">
+
+            <div class="form-fieldset  feedback-form__impressions">
               <div class="form-fieldset__title">Ваше общее впечатление:</div>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--radio" for="positive">
+              <div class="form-fieldset__wrapper-impressions">
                 <input class="form-fieldset__radio" type="radio" name="impression" id="positive" value="positive" checked/>
-                Скорее положительное
-              </label>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--radio" for="negative">
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--radio" for="positive">
+                  Скорее положительное
+                </label>
+              </div>
+              <div class="form-fieldset__wrapper-impressions">
                 <input class="form-fieldset__radio" type="radio" name="impression" id="negative" value="negative"/>
-                Скорее отрицательное
-              </label>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--radio" for="unknown">
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--radio" for="negative">
+                  Скорее отрицательное
+                </label>
+              </div>
+              <div class="form-fieldset__wrapper-impressions">
                 <input class="form-fieldset__radio" type="radio" name="impression" id="unknown" value="unknown"/>
-                Затрудняюсь ответить
-              </label>
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--radio" for="unknown">
+                  Затрудняюсь ответить
+                </label>
+              </div>
             </div>
-            <div class="form-fieldset  form-fieldset--attractions">
+
+            <div class="form-fieldset  feedback-form__attractions">
               <div class="form-fieldset__title">Посещенные <br/> достопримечательности:</div>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="devil's bridge">
+              <div class="form-fieldset__wrapper-attractions">
                 <input class="form-fieldset__checkbox" type="checkbox" name="devil's bridge" id="devil's bridge" checked/>
-                Мост Дьявола
-              </label>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="slide park">
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--check" for="devil's bridge">
+                  Мост Дьявола
+                </label>
+              </div>
+              <div class="form-fieldset__wrapper-attractions">
                 <input class="form-fieldset__checkbox" type="checkbox" name="slide park" id="slide park" checked/>
-                Слайд-парк
-              </label>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="mountain bell">
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--check" for="slide park">
+                  Слайд-парк
+                </label>
+              </div>
+              <div class="form-fieldset__wrapper-attractions">
                 <input class="form-fieldset__checkbox" type="checkbox" name="mountain bell" id="mountain bell"/>
-                Гора-Колокол
-              </label>
-              <label class="form-fieldset__label  form-fieldset__label--bold  form-fieldset__label--check" for="red rocks">
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--check" for="mountain bell">
+                  Гора-Колокол
+                </label>
+              </div>
+              <div class="form-fieldset__wrapper-attractions">
                 <input class="form-fieldset__checkbox" type="checkbox" name="red rocks" id="red rocks" checked/>
-                Красные скалы
-              </label>
+                <label class="form-fieldset__label-bold  form-fieldset__label-bold--check" for="red rocks">
+                  Красные скалы
+                </label>
+              </div>
             </div>
-            <div class="form-fieldset  form-fieldset--text">
+
+            <div class="form-fieldset  feedback-form__text">
               <div class="form-fieldset__title  form-fieldset--emotions">Опишите свои эмоции:</div>
               <textarea class="form-fieldset__text" placeholder="Опишите подробно все свои восторги" rows="4"></textarea>
             </div>
-            <input class="button form__button" type="submit" value="Отправить отзыв"/>
+
+            <input class="button feedback-form__button" type="submit" value="Отправить отзыв"/>
             <div class="feedback-form__note">
               * - Обязательные поля
             </div>
@@ -150,7 +198,9 @@
         <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">Разработано</span>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
-            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"/>
+            <svg class="page-footer__copyright-img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
           </a>
         </div>
       </footer>
@@ -158,9 +208,9 @@
       <!-- POP UP -->
 
       <section class="success-popup">
-        <header class="section-header  success__header">
-          <h1 class="section-header__title">Ваш отзыв отправлен!</h1>
-          <p class="section-header__text">
+        <header class="success-popup__header">
+          <h1 class="success-popup__header-title">Ваш отзыв отправлен!</h1>
+          <p class="success-popup__header-text">
             Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
           </p>
         </header>
@@ -170,9 +220,9 @@
       </section>
 
       <section class="failure-popup">
-        <header class="section-header  failure__header">
-          <h1 class="section-header__title">Что-то пошло не так!</h1>
-          <p class="section-header__text">
+        <header class="failure-popup__header">
+          <h1 class="failure-popup__header-title">Что-то пошло не так!</h1>
+          <p class="failure-popup__header-text">
             Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
           </p>
         </header>
@@ -180,22 +230,8 @@
       </section>
 
     </div>
-    <script src="js/main-menu.js" async>
-      var menuMain = document.querySelector('.main-menu');
-      var menuToggle = document.querySelector('.main-menu__toggle');
-
-      menuMain.classList.remove('main-menu--nojs');
-
-      menuToggle.addEventListener('click', function() {
-        if (menuMain.classList.contains('main-menu--closed')) {
-          menuMain.classList.remove('main-menu--closed');
-          menuMain.classList.add('main-menu--opened');
-        } else {
-            menuMain.classList.add('main-menu--closed');
-            menuMain.classList.remove('main-menu--opened');
-          }
-      });
-    </script>
+    <script src="js/main-menu.min.js"></script>
   </body>
 </html>
+
 
