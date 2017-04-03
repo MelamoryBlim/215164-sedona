@@ -25,20 +25,20 @@ gulp.task("style", function() {
         sort: false
       })
     ]))
-    .pipe(gulp.dest("build.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
-    .pipe(rename(style.min.css))
-    .pipe(gulp.dest("build.css"))
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
 gulp.task("images", function() {
-  return gulp.src("build.img/**/*.{png,jpg,gif}")
+  return gulp.src("build/img/**/*.{png,jpg,gif}")
   .pipe(imagemin([
     imagemin.optipng({optimizationlevel: 3}),
     imagemin.jpegtran({progressive: true})
   ]))
-  .pipe(gulp.dest("build.img"));
+  .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("serve", function() {
