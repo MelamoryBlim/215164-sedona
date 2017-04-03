@@ -4,35 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HTML Academy: Седона - Фото и видео</title>
-    <link href="css/style.css" rel="stylesheet"/>
-
-
-
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        background-image: url("img/sedona-photo-mobile.jpg");
-      }
-      @media ( min-width: 768px ) {
-        HTML {
-          background-image: url("img/sedona-photo-tablet.jpg");
-        }
-      }
-      @media ( min-width: 1200px ) {
-        HTML {
-          background-image: url("img/sedona-photo-desktop.jpg");
-        }
-      }
-      BODY {
-        opacity: .5;
-      }
-    </style>
-    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-    <script src="../node_modules/pixel-glass/script.js"></script>
-
-
-
+    <link href="css/style.min.css" rel="stylesheet"/>
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body class="page">
     <div class="page__wrapper">
@@ -76,7 +49,7 @@
 
         <div class="intro">
           <div class="intro__image  intro__image--min">
-            <img src="img/text-sedona.svg" sizes="(min-width: 768px) 460px : 232px" alt="Добро пожаловать в Седону"/>
+            <img src="img/text-sedona.svg" alt="Добро пожаловать в Седону"/>
           </div>
         </div>
 
@@ -89,7 +62,7 @@
               Не можете решиться на путешествие из-за курса? Фотографии&nbsp;помогут вам&nbsp;забыть о политике и экономике.
             </p>
           </header>
-          <div class="photo  photo--first" href="#">
+          <div class="photo  photo--first">
             <a class="photo__link" href="#">
               <picture class="photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x"/>
@@ -97,7 +70,7 @@
                 <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@1x.jpg 1x, img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы"/>
               </picture>
             </a>
-            <div class="photo__description" href="#">
+            <div class="photo__description">
               <div class="photo__text">
                 <a class="photo__title" href="#">
                   Неродные просторы
@@ -111,7 +84,7 @@
               </div>
             </div>
           </div>
-          <div class="photo" href="#">
+          <div class="photo">
             <a class="photo__link" href="#">
               <picture class="photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x"/>
@@ -119,7 +92,7 @@
                 <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@1x.jpg 1x, img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность"/>
               </picture>
             </a>
-            <div class="photo__description" href="#">
+            <div class="photo__description">
               <div class="photo__text">
                 <a class="photo__title" href="#">
                   Местная растительность
@@ -133,7 +106,7 @@
               </div>
             </div>
           </div>
-          <div class="photo" href="#">
+          <div class="photo">
             <a class="photo__link" href="#">
               <picture class="photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x"/>
@@ -141,7 +114,7 @@
                 <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@1x.jpg 1x, img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север"/>
               </picture>
             </a>
-            <div class="photo__description" href="#">
+            <div class="photo__description">
               <div class="photo__text">
                 <a class="photo__title" href="#">
                   Дорога на север
@@ -155,7 +128,7 @@
               </div>
             </div>
           </div>
-          <div class="photo  photo--last" href="#">
+          <div class="photo  photo--last">
             <a class="photo__link" href="#">
               <picture class="photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x"/>
@@ -163,7 +136,7 @@
                 <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@1x.jpg 1x, img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола"/>
               </picture>
             </a>
-            <div class="photo__description" href="#">
+            <div class="photo__description">
               <div class="photo__text">
                 <a class="photo__title" href="#">
                   Мост дьявола
@@ -190,9 +163,9 @@
           </header>
           <div class="player">
             <video class="player__video" preload="auto">
-              <source src="#" type="#">
-              <source src="#" type="#">
-              <source src="#" type="#">
+              <source src="#" type="video/mp4">
+              <source src="#" type="video/ogg">
+              <source src="#" type="video/webm">
             </video>
             <div class="player__controls">
               <div class="player__volume">
